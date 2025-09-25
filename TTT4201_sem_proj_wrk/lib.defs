@@ -1,0 +1,7 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+INCLUDE $HPEESOF_DIR/oalibs/dsp.defs
+INCLUDE $HOME/Documents/ADS${__SPACE}Designkits/Johanson_lib_v1.0/lib.defs
+INCLUDE $HOME/Documents/ADS${__SPACE}Designkits/MA_RFP_ADS_v2p5/lib.defs
+INCLUDE $HOME/Documents/ADS${__SPACE}Designkits/muRataLibWeb_C_EIA_confidential/lib.defs
+DEFINE TTT4201_sem_proj1_lib TTT4201_sem_proj1_lib
+ASSIGN TTT4201_sem_proj1_lib libMode shared

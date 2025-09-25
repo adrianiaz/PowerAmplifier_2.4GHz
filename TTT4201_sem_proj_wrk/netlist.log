@@ -1,0 +1,111 @@
+; Top Design: "TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic"
+; Netlisted using Hierarchy Policy: "Standard"
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+; Library Name: Johanson_lib
+; Cell Name: CapJT
+; View Name: schematic
+define CapJT ( P1  P2 ) 
+parameters  C=1.0 pF 
+C:C7  N__1 P2 C=0.937*C 
+L:L1  P1 N__1 L=(0.647*(C/(1pF))^-0.0414) nH R=3.74*(C/(1pF))^-0.195 Ohm Noise=yes  
+C:C10  P2 0 C=0.0317 pF 
+C:C9  P1 0 C=0.0317 pF 
+end CapJT
+
+; Library Name: TTT4201_sem_proj1_lib
+; Cell Name: PA_Real_BiasGate
+; View Name: schematic
+define PA_Real_BiasGate ( DCConnect  RF ) 
+;parameters 
+MLIN2:TL1  N__1 DCConnect Subst="MSub1" W=1.5 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MTEE_ADS:Tee1  N__2 N__1 N__3 Subst="MSub1" W1=1.5 mm W2=1.5 mm W3=1 mm 
+MLIN2:TL2  N__4 N__2 Subst="MSub1" W=0.625 mm L=2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MTEE_ADS:Tee2  N__5 N__4 N__6 Subst="MSub1" W1=1.5 mm W2=1.5 mm W3=1 mm 
+MLIN2:TL3  N__7 N__5 Subst="MSub1" W=1.5 mm L=2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MTEE_ADS:Tee3  N__8 N__7 N__18 Subst="MSub1" W1=1.5 mm W2=1.5 mm W3=1 mm 
+MLIN2:TL4  N__10 N__8 Subst="MSub1" W=0.625 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MCROSO:Cros1  N__20 N__14 N__10 N__12 Subst="MSub1" W1=W50 mm W2=W50 mm W3=1.5 mm W4=1.5 mm 
+MLIN2:TL5  N__14 0 Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MLIN2:TL6  N__12 RF Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+CapJT:Kap1  N__18 N__15 C=10 pF 
+MGAP:Gap1  N__18 N__15 Subst="MSub1" W=0.3 mm S=0.6 mm 
+VIA:V1  N__15 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
+GRM18:C1  N__6 N__11 PartNumber=900 
+GRM31:C2  N__3 N__19 PartNumber=548 
+CapJT:Kap2  N__20 0 C=1 pF 
+MGAP:Gap2  N__20 0 Subst="MSub1" W=0.3 mm S=0.6 mm 
+VIA:V2  N__11 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
+VIA:V3  N__19 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
+end PA_Real_BiasGate
+
+; Library Name: TTT4201_sem_proj1_lib
+; Cell Name: PA_StabCircuit
+; View Name: schematic
+define PA_StabCircuit ( toMatch  toTrans ) 
+;parameters 
+R:R1  toMatch toTrans R=50 Ohm Noise=yes 
+CapJT:Kap1  toMatch toTrans C=Cs pF 
+end PA_StabCircuit
+
+; Library Name: TTT4201_sem_proj1_lib
+; Cell Name: PA_Ideal
+; View Name: schematic
+define PA_Ideal ( RFin  RFout  VdcDrain  VdcGate ) 
+;parameters 
+#uselib "MA_RFP_ADS_v2p5" , "CG2H40010F_v2"
+"CG2H40010F_v2":X1  N__3 N__7 0 Rth=7.83 Tbase=25 VDN=28 x1=1 x2=1 
+Short:DC_Block1  N__7 RFout Mode=1 
+Short:DC_Block2  RFin N__9 Mode=1 
+PA_Real_BiasGate:X3  VdcGate N__9 
+Short:DC_Feed2  VdcDrain N__7 Mode=-1 
+PA_StabCircuit:X2  N__9 N__3 
+
+Cs=4.7
+model MSub1 MSUB H=1.52e-3 mm Er=4.4 Mur=1 Cond=5.96e7 Hu=1e+33 mm T=35e-6 mm TanD=0.02 Rough=0 mm DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
+
+W50=2.8897
+end PA_Ideal
+
+PA_Ideal:X1  N__0 N__4 N__5 N__1 
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 SPSS_WSP=yes \
+SweepVar="freq" SweepPlan="SwpPlan1" OutputPlan="SP1_Output" 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+Port:Term1  N__0 0 Num=1 Z=Z0 Noise=yes 
+Port:Term2  N__4 0 Num=2 Z=Z0 Noise=yes 
+V_Source:SRC1  N__1 0 Type="V_DC" Vdc=-2.6 V SaveCurrent=1 
+V_Source:SRC2  N__5 0 Type="V_DC" Vdc=28 V SaveCurrent=1 
+
+Z0=50
+
+
+SweepPlan:SwpPlan1 SweepPlan[1]="SwpPlan1_seg1" \ 
+SweepPlan[2]="SwpPlan1_seg2" 
+SweepPlan:SwpPlan1_seg1 Start=0.4GHz Stop=5 GHz Step=0.1 GHz 
+SweepPlan:SwpPlan1_seg2 Start=2GHz Stop=2.8 GHz Step=0.05 GHz 
+
+SweepPlan:SwpPlan2 SweepPlan[1]="SwpPlan2_seg1" 
+SweepPlan:SwpPlan2_seg1 Start=2.2GHz Stop=2.6 GHz Step=0.05 GHz 
+
+Options:Options1 Tnom=25 TopologyCheck=yes ForceS_Params=yes GiveAllWarnings=yes MaxWarnings=10  \
+ForceM_Params=yes InitialGuessAnnotation=0 TopologyCheckMessages=no doDeltaAC=no ReduceSPortRatio=0.5  \
+WarnSOA=yes MaxWarnSOA=5 Census=no MinNodalR=1e-2 Ohm LargeCapThreshold=1e-3 F  \
+EnableAssertChecks=no EnableSpareRemoval=yes 
+
+
+#ifndef muRataLibWeb_C
+#define muRataLibWeb_C
+; models
+#include "C:/Users/student/Documents/ADS Designkits/muRataLibWeb_C_EIA_confidential/circuit/models/encode.net"
+#endif
+
+
