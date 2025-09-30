@@ -1,10 +1,8 @@
 <!DOCTYPE SaveWorkspaceState>
 <SaveWorkspaceState>
     <Windows>
-        <Schematic x1="1919" cell="PA_Ideal" y1="-8" geom="1,1,2,365,75,1470,901,1920,1200" width="1920" lib="TTT4201_sem_proj1_lib" view="schematic" height="1147"/>
-        <Schematic x1="-1" cell="PA_Real_BiasGate" y1="-8" geom="1,0,3,327,155,1470,901,1920,1200" width="1920" lib="TTT4201_sem_proj1_lib" view="schematic" height="1147"/>
-        <Schematic x1="-1" cell="PA_StabCircuit" y1="-8" geom="1,0,3,347,175,1470,901,1920,1200" width="1920" lib="TTT4201_sem_proj1_lib" view="schematic" height="1147"/>
-        <DDS name="SP_NF_GainMatchK.dds"/>
+        <Schematic x1="-1" cell="SP_NF_GainMatchK" height="1147" lib="TTT4201_sem_proj1_lib" view="schematic" y1="-8" geom="1,0,2,367,195,1470,901,1920,1200" width="1920"/>
+        <DDS name="SP_NF_GainMatchK"/>
     </Windows>
     <MainWindowTab tab="1"/>
 </SaveWorkspaceState>

@@ -12,5 +12,5 @@ ProcessCreationTime_Readable   Tue Sep 30 18:05:12 2025 Vest-Europa (sommertid)
 AppIdentifier                  OA File System Design Manager
 OSType                         win32
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         C:\Users\student\Adrian_Niazi\git folder\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\TTT4201_sem_proj1_lib\%S%P_%N%F_%Gain%Match%K\schematic\sch.oa.cdslck
-TimeEditLocked                 Tue Sep 30 18:05:55 2025 Vest-Europa (sommertid)
+FilePathUsedToEditLock         C:\Users\student\Adrian_Niazi\git folder\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\TTT4201_sem_proj1_lib\%P%A_%Real_%Bias%Gate\schematic\sch.oa.cdslck
+TimeEditLocked                 Tue Sep 30 18:07:02 2025 Vest-Europa (sommertid)
