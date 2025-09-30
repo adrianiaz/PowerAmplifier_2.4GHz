@@ -3,59 +3,29 @@ hpeesofsim (*) 615.shp Nov  9 2024, MINT version 5
     (64-bit windows built: Sat Nov 09, 2024 21:47:38 +0000)
 
 
-***** Simulation started at Thu Sep 25 19:30:21 2025
+***** Simulation started at Tue Sep 30 18:00:08 2025
       Running on host: "LAB-PC"
-      In Directory: "C:\Users\student\Adrian_Niazi\TTT4201_sem_proj_wrk\data"
-      Process ID: 15324
-
-Warning detected by hpeesofsim during netlist flattening.
-    Capacitor `X1.X3.Kap2.C10' is shorted.
+      In Directory: "C:\Users\student\Adrian_Niazi\git folder\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\data"
+      Process ID: 16472
 
 Pt DC convergence is used.
 
 SP SP1[1] <TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic>   freq=(400 MHz->5 GHz)
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.002890) < MinRecommendValue(0.000001) OR UserValue > MaxRecommendValue(0.000004) for 'W1' in `X1.X3.Cros1'
 
+Warning detected by hpeesofsim during circuit set up.
+    `X1.X1.X1': Unable to resolve variable(s) or functions(s) in expression ` idi = id.i'
+        id.i
 
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.002890) < MinRecommendValue(0.000001) OR UserValue > MaxRecommendValue(0.000004) for 'W2' in `X1.X3.Cros1'
+Warning detected by hpeesofsim during circuit set up.
+    `X1.X1.X1': Unable to resolve variable(s) or functions(s) in expression `vdsi=vdi-vsi'
+        vdi
+        vsi
 
-
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.001500) < MinRecommendValue(0.000001) OR UserValue > MaxRecommendValue(0.000004) for 'W3' in `X1.X3.Cros1'
-
-
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.001500) < MinRecommendValue(0.000001) OR UserValue > MaxRecommendValue(0.000004) for 'W4' in `X1.X3.Cros1'
-
-
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.000300) < MinRecommendValue(0.000000) OR UserValue > MaxRecommendValue(0.000005) for 'W' in `X1.X3.Gap2'
-
-
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.000300) < MinRecommendValue(0.000000) OR UserValue > MaxRecommendValue(0.000005) for 'W' in `X1.X3.Gap1'
-
-
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.002890) < MinRecommendValue(0.000000) OR UserValue > MaxRecommendValue(0.000152) for 'W' in `X1.X3.TL6'
-
-
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.002890) < MinRecommendValue(0.000000) OR UserValue > MaxRecommendValue(0.000152) for 'W' in `X1.X3.TL5'
-
-
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.000625) < MinRecommendValue(0.000000) OR UserValue > MaxRecommendValue(0.000152) for 'W' in `X1.X3.TL4'
-
-
-Warning detected by hpeesofsim during SP analysis 'SP1'.
-    UserValue(0.001500) < MinRecommendValue(0.000000) OR UserValue > MaxRecommendValue(0.000152) for 'W' in `X1.X3.TL3'
-
-
+Warning detected by hpeesofsim during circuit set up.
+    `X1.X1.X1': Unable to resolve variable(s) or functions(s) in expression `Tj=dT'
+        dT
 
 
 Resource usage:
-  Total stopwatch time     =     1.18 seconds.
+  Total stopwatch time     =     1.20 seconds.
 

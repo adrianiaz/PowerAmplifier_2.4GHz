@@ -14,29 +14,43 @@ C:C9  P1 0 C=0.0317 pF
 end CapJT
 
 ; Library Name: TTT4201_sem_proj1_lib
+; Cell Name: PA_Real_BiasDrain
+; View Name: schematic
+define PA_Real_BiasDrain ( DCConnect  RF ) 
+;parameters 
+GRM31:C2  N__14 N__5 PartNumber=548 
+MLEF2:TL7  N__13 Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+CapJT:Kap1  N__18 N__12 C=10 pF 
+MLIN2:TL6  N__11 RF Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MLIN2:TL4  N__6 N__7 Subst="MSub1" W=1.5 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MLIN2:TL1  N__10 DCConnect Subst="MSub1" W=1.5 mm L=2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MCROSO:Cros2  N__7 N__14 N__10 N__8 Subst="MSub1" W1=0.625 mm W2=0.625 mm W3=0.625 mm W4=1.25 mm 
+VIA:V2  N__16 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
+VIA:V3  N__5 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
+VIA:V1  N__12 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
+MGAP:Gap1  N__18 N__12 Subst="MSub1" W=0.625 mm S=1 mm 
+GRM18:C1  N__8 N__16 PartNumber=900 
+MCROSO:Cros1  N__18 N__13 N__6 N__11 Subst="MSub1" W1=1.5 mm W2=W50 mm W3=1.5 mm W4=W50 mm 
+end PA_Real_BiasDrain
+
+; Library Name: TTT4201_sem_proj1_lib
 ; Cell Name: PA_Real_BiasGate
 ; View Name: schematic
 define PA_Real_BiasGate ( DCConnect  RF ) 
 ;parameters 
-MLIN2:TL1  N__1 DCConnect Subst="MSub1" W=1.5 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MTEE_ADS:Tee1  N__2 N__1 N__3 Subst="MSub1" W1=1.5 mm W2=1.5 mm W3=1 mm 
-MLIN2:TL2  N__4 N__2 Subst="MSub1" W=0.625 mm L=2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MTEE_ADS:Tee2  N__5 N__4 N__6 Subst="MSub1" W1=1.5 mm W2=1.5 mm W3=1 mm 
-MLIN2:TL3  N__7 N__5 Subst="MSub1" W=1.5 mm L=2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MTEE_ADS:Tee3  N__8 N__7 N__18 Subst="MSub1" W1=1.5 mm W2=1.5 mm W3=1 mm 
-MLIN2:TL4  N__10 N__8 Subst="MSub1" W=0.625 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MCROSO:Cros1  N__20 N__14 N__10 N__12 Subst="MSub1" W1=W50 mm W2=W50 mm W3=1.5 mm W4=1.5 mm 
-MLIN2:TL5  N__14 0 Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MLIN2:TL1  N__1 DCConnect Subst="MSub1" W=1.5 mm L=2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MCROSO:Cros2  N__7 N__21 N__1 N__14 Subst="MSub1" W1=0.625 mm W2=0.625 mm W3=0.625 mm W4=1.25 mm 
+MLEF2:TL7  N__17 Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MLIN2:TL4  N__10 N__7 Subst="MSub1" W=1.5 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
 MLIN2:TL6  N__12 RF Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-CapJT:Kap1  N__18 N__15 C=10 pF 
-MGAP:Gap1  N__18 N__15 Subst="MSub1" W=0.3 mm S=0.6 mm 
-VIA:V1  N__15 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
-GRM18:C1  N__6 N__11 PartNumber=900 
-GRM31:C2  N__3 N__19 PartNumber=548 
-CapJT:Kap2  N__20 0 C=1 pF 
-MGAP:Gap2  N__20 0 Subst="MSub1" W=0.3 mm S=0.6 mm 
-VIA:V2  N__11 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
+MGAP:Gap1  N__15 N__20 Subst="MSub1" W=0.625 mm S=1 mm 
+CapJT:Kap1  N__15 N__20 C=10 pF 
 VIA:V3  N__19 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
+VIA:V1  N__20 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
+GRM18:C1  N__14 N__11 PartNumber=900 
+GRM31:C2  N__21 N__19 PartNumber=548 
+MCROSO:Cros1  N__15 N__17 N__10 N__12 Subst="MSub1" W1=1.5 mm W2=W50 mm W3=1.5 mm W4=W50 mm 
+VIA:V2  N__11 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
 end PA_Real_BiasGate
 
 ; Library Name: TTT4201_sem_proj1_lib
@@ -54,17 +68,17 @@ end PA_StabCircuit
 define PA_Ideal ( RFin  RFout  VdcDrain  VdcGate ) 
 ;parameters 
 #uselib "MA_RFP_ADS_v2p5" , "CG2H40010F_v2"
-"CG2H40010F_v2":X1  N__3 N__7 0 Rth=7.83 Tbase=25 VDN=28 x1=1 x2=1 
-Short:DC_Block1  N__7 RFout Mode=1 
+"CG2H40010F_v2":X1  N__3 N__4 0 Rth=7.83 Tbase=25 VDN=28 x1=1 x2=1 
+Short:DC_Block1  N__4 RFout Mode=1 
 Short:DC_Block2  RFin N__9 Mode=1 
 PA_Real_BiasGate:X3  VdcGate N__9 
-Short:DC_Feed2  VdcDrain N__7 Mode=-1 
 PA_StabCircuit:X2  N__9 N__3 
 
 Cs=4.7
-model MSub1 MSUB H=1.52e-3 mm Er=4.4 Mur=1 Cond=5.96e7 Hu=1e+33 mm T=35e-6 mm TanD=0.02 Rough=0 mm DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
+model MSub1 MSUB H=1.52 mm Er=4.4 Mur=1 Cond=5.96e7 Hu=1e+33 mm T=35 um TanD=0.02 Rough=0 mm DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
 
-W50=2.8897
+W50=2.889770
+PA_Real_BiasDrain:X4  VdcDrain N__4 
 end PA_Ideal
 
 PA_Ideal:X1  N__0 N__4 N__5 N__1 
