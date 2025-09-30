@@ -3,10 +3,10 @@ hpeesofsim (*) 615.shp Nov  9 2024, MINT version 5
     (64-bit windows built: Sat Nov 09, 2024 21:47:38 +0000)
 
 
-***** Simulation started at Tue Sep 30 18:00:08 2025
+***** Simulation started at Tue Sep 30 20:31:06 2025
       Running on host: "LAB-PC"
       In Directory: "C:\Users\student\Adrian_Niazi\git folder\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\data"
-      Process ID: 16472
+      Process ID: 3676
 
 Pt DC convergence is used.
 
@@ -27,5 +27,5 @@ Warning detected by hpeesofsim during circuit set up.
 
 
 Resource usage:
-  Total stopwatch time     =     1.20 seconds.
+  Total stopwatch time     =     1.15 seconds.
 

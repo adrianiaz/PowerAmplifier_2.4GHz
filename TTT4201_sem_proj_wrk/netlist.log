@@ -68,17 +68,23 @@ end PA_StabCircuit
 define PA_Ideal ( RFin  RFout  VdcDrain  VdcGate ) 
 ;parameters 
 #uselib "MA_RFP_ADS_v2p5" , "CG2H40010F_v2"
-"CG2H40010F_v2":X1  N__3 N__4 0 Rth=7.83 Tbase=25 VDN=28 x1=1 x2=1 
+"CG2H40010F_v2":X1  N__3 N__11 0 Rth=7.83 Tbase=25 VDN=28 x1=1 x2=1 
 Short:DC_Block1  N__4 RFout Mode=1 
-Short:DC_Block2  RFin N__9 Mode=1 
-PA_Real_BiasGate:X3  VdcGate N__9 
-PA_StabCircuit:X2  N__9 N__3 
+Short:DC_Block2  RFin N__7 Mode=1 
+PA_Real_BiasGate:X3  VdcGate N__0 
+PA_StabCircuit:X2  N__0 N__3 
 
 Cs=4.7
 model MSub1 MSUB H=1.52 mm Er=4.4 Mur=1 Cond=5.96e7 Hu=1e+33 mm T=35 um TanD=0.02 Rough=0 mm DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
 
-W50=2.889770
-PA_Real_BiasDrain:X4  VdcDrain N__4 
+W50=2.867830
+PA_Real_BiasDrain:X4  VdcDrain N__11 
+TLIN:TL1  N__7 N__0 Z=50.0 Ohm E=19.8919 opt{ 10 to 40 } F=2.4 GHz 
+TLIN:TL3  N__11 N__4 Z=50.0 Ohm E=31.901 opt{ 10 to 55 } F=2.4 GHz 
+#uselib "ckt" , "TLOC"
+TLOC:TL4  N__4 0 Z=50.0 Ohm E=59.7189 opt{ 37 to 80 } F=2.4 GHz 
+#uselib "ckt" , "TLOC"
+TLOC:TL2  N__7 0 Z=50.0 Ohm E=69.5942 opt{ 40 to 84 } F=2.4 GHz 
 end PA_Ideal
 
 PA_Ideal:X1  N__0 N__4 N__5 N__1 
@@ -123,3 +129,12 @@ EnableAssertChecks=no EnableSpareRemoval=yes
 #endif
 
 
+
+Optim:"Optim1" OptimType="hpVMO" ErrorForm="L2" SAProgressReport=0 MaxIters=50 P=2 DesiredError=0.0 StatusLevel=4 FinalAnalysis="SP1" NormalizeGoals=yes SetBestValues=yes SaveSolns=no SaveGoals=yes SaveOptimVars=no UpdateDataset=yes SaveNominal=no SaveAllIterations=no UseAllOptVars=yes UseAllGoals=yes SaveCurrentEF=no InitialTempControlMode=0 SANumTrialsPerIter=10 NumShootsPerIter=20 SATempControlAlpha=0.8 CoranaSkip=0.0 EnableCockpit=yes NormalizeError=yes SaveAllTrials=no UseAdvTermCriteria=no CostRelativeTol=1.0e-8 LimitOfContSmallImprovement=5 
+
+OptimGoal:OptimGoal1 Expr="mag(S(1,1))" SimInstanceName="SP1" Weight=1.0 \
+SpecLimitLine[1]="OptimGoal1_limit1" 
+SpecLimitLine:"OptimGoal1_limit1" Type="EqualTo" Min=0.0 Max=0.0 Weight=1.0 
+OptimGoal:OptimGoal2 Expr="mag(S(2,2))" SimInstanceName="SP1" Weight=1.0 \
+SpecLimitLine[1]="OptimGoal2_limit1" 
+SpecLimitLine:"OptimGoal2_limit1" Type="EqualTo" Min=0.0 Max=0.0 Weight=1.0 
