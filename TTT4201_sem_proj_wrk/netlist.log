@@ -1,7 +1,7 @@
 ; Top Design: "TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=yes TopDesignName="TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
 ; Library Name: Johanson_lib
 ; Cell Name: CapJT
 ; View Name: schematic
@@ -93,7 +93,7 @@ MGAP:Gap1  N__12 N__0 Subst="MSub1" W=1.5 mm S=0.5 mm
 end PA_Ideal
 
 S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz Freq=2.4 GHz DevOpPtLevel=0 SPSS_WSP=yes \
-SweepVar="freq" SweepPlan="SwpPlan1" OutputPlan="SP1_Output" 
+OutputPlan="SP1_Output" 
 
 OutputPlan:SP1_Output \
       Type="Output" \
@@ -139,9 +139,12 @@ SweepPlan:SwpPlan1_seg2 Start=2GHz Stop=2.8 GHz Step=0.05 GHz
 
 Optim:"Optim1" OptimType="hpVMO" ErrorForm="L2" SAProgressReport=0 MaxIters=50 P=2 DesiredError=0.0 StatusLevel=4 FinalAnalysis="SP1" NormalizeGoals=yes SetBestValues=yes SaveSolns=no SaveGoals=yes SaveOptimVars=no UpdateDataset=yes SaveNominal=no SaveAllIterations=no UseAllOptVars=yes UseAllGoals=yes SaveCurrentEF=no InitialTempControlMode=0 SANumTrialsPerIter=10 NumShootsPerIter=20 SATempControlAlpha=0.8 CoranaSkip=0.0 EnableCockpit=yes NormalizeError=yes SaveAllTrials=no UseAdvTermCriteria=no CostRelativeTol=1.0e-8 LimitOfContSmallImprovement=5 
 
-OptimGoal:OptimGoal2 Expr="mag(S(2,2))" SimInstanceName="SP1" Weight=1.0 \
-SpecLimitLine[1]="OptimGoal2_limit1" 
-SpecLimitLine:"OptimGoal2_limit1" Type="EqualTo" Min=0.0 Max=0.0 Weight=1.0 
-OptimGoal:OptimGoal1 Expr="mag(S(1,1))" SimInstanceName="SP1" Weight=1.0 \
-SpecLimitLine[1]="OptimGoal1_limit1" 
-SpecLimitLine:"OptimGoal1_limit1" Type="EqualTo" Min=0.0 Max=0.0 Weight=1.0 
+OptimGoal:OptimGoal3 Expr="mu_source" SimInstanceName="SP1" Weight=1.0 \
+SpecLimitLine[1]="OptimGoal3_limit1" 
+SpecLimitLine:"OptimGoal3_limit1" Type="GreaterThan" Min=1.0000001 Weight=1.0 
+OptimGoal:OptimGoal4 Expr="mu_load" SimInstanceName="SP1" Weight=1.0 \
+SpecLimitLine[1]="OptimGoal4_limit1" 
+SpecLimitLine:"OptimGoal4_limit1" Type="GreaterThan" Min=1.0000001 Weight=1.0 
+OptimGoal:OptimGoal5 Expr="db(S(2,1))" SimInstanceName="SP1" Weight=1.0 \
+SpecLimitLine[1]="OptimGoal5_limit1" 
+SpecLimitLine:"OptimGoal5_limit1" Type="GreaterThan" Min=25 Weight=1.0 

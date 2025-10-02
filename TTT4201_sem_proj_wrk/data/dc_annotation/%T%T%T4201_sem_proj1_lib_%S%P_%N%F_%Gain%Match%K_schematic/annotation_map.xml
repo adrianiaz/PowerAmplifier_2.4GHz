@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<annotation_files Version="1.0" Simulator="hpeesofsim" Time="tor. okt. 2 21:39:03 2025">
+<annotation_files Version="1.0" Time="tor. okt. 2 22:04:32 2025" Simulator="hpeesofsim">
  <File name="annotation_1.xml">
   <Controller name="SP1">
-   <P>freq: 4.0000000000000000e+08</P>
+   <P>optIter: 0</P>
+   <P>freq: 2.4000000000000000e+09</P>
   </Controller>
  </File>
 </annotation_files>
