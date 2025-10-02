@@ -1,7 +1,7 @@
-; Top Design: "TTT4201_sem_proj1_lib:PA_Ideal:schematic"
+; Top Design: "TTT4201_sem_proj1_lib:HB1TonePAE_Pswp:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="TTT4201_sem_proj1_lib:PA_Ideal:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="TTT4201_sem_proj1_lib:HB1TonePAE_Pswp:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
 ; Library Name: Johanson_lib
 ; Cell Name: CapJT
 ; View Name: schematic
@@ -63,25 +63,99 @@ MGAP:Gap1  toMatch toTrans Subst="MSub1" W=1.5 mm S=0.5 mm
 CapJT:Kap1  toMatch toTrans C=Cs pF 
 end PA_StabCircuit
 
+; Library Name: TTT4201_sem_proj1_lib
+; Cell Name: PA_Ideal
+; View Name: schematic
+define PA_Ideal ( RFin  RFout  VdcDrain  VdcGate ) 
+;parameters 
 #uselib "MA_RFP_ADS_v2p5" , "CG2H40010F_v2"
 "CG2H40010F_v2":X1  N__3 N__11 0 Rth=7.83 Tbase=25 VDN=28 x1=1 x2=1 
 Short:DC_Block1  N__4 RFout Mode=1 
 Short:DC_Block2  RFin N__7 Mode=1 
 PA_Real_BiasGate:X3  VdcGate N__12 
-TLIN:TL1  N__7 N__0 Z=50.0 Ohm E=19.8919 opt{ 10 to 40 } F=2.4 GHz 
+TLIN:TL1  N__7 N__0 Z=50.0 Ohm E=Li2 F=2.4 GHz 
 PA_StabCircuit:X2  N__0 N__3 
 
-Cs=4.7 tune{ 2.35 to 7.050000000000001 by 0.47000000000000003 }
-Rs=50 tune{ 25 to 200 by 5 }
-Rp=50 tune{ 25 to 200 by 5 }
+Cs=7.74595 opt{ 1 to 82 }
+Rs=10.0099 opt{ 10 to 10000 }
+Rp=6270.18 opt{ 0 to 10000 }
 model MSub1 MSUB H=1.52 mm Er=4.4 Mur=1 Cond=5.96e7 Hu=1e+33 mm T=35 um TanD=0.02 Rough=0 mm DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
 
 W50=2.867830
 PA_Real_BiasDrain:X4  VdcDrain N__11 
 #uselib "ckt" , "TLOC"
-TLOC:TL2  N__7 0 Z=50.0 Ohm E=69.5942 opt{ 40 to 84 } F=2.4 GHz 
-TLIN:TL3  N__11 N__4 Z=50.0 Ohm E=31.901 opt{ 10 to 55 } F=2.4 GHz 
+TLOC:TL2  N__7 0 Z=50.0 Ohm E=Li1 F=2.4 GHz 
+TLIN:TL3  N__11 N__4 Z=50.0 Ohm E=Lo1 F=2.4 GHz 
 #uselib "ckt" , "TLOC"
-TLOC:TL4  N__4 0 Z=50.0 Ohm E=59.7189 opt{ 37 to 80 } F=2.4 GHz 
+TLOC:TL4  N__4 0 Z=50.0 Ohm E=Lo2 F=2.4 GHz 
 R:R1  N__12 N__0 R=Rp Ohm Noise=yes 
 MGAP:Gap1  N__12 N__0 Subst="MSub1" W=1.5 mm S=0.5 mm 
+
+Li1=69.4113 opt{ 65 to 75 }
+Li2=15 opt{ 15 to 25 }
+
+Lo1=30.6144 opt{ 25 to 40 }
+Lo2=60.7516 opt{ 55 to 70 }
+end PA_Ideal
+
+HB:HB1 MaxOrder=4 Freq[1]=RFfreq Order[1]=5 StatusLevel=2 FundOversample=1 \
+Restart=no OutputBudgetIV=no UseOutFile=no \
+HBSS_WSP=0 UseInFile=no SS_Freq=1.0 kHz SweepVar="RFpower" SweepPlan="Sweep1" OutputPlan="HB1_Output" 
+
+OutputPlan:HB1_Output \
+      Type="Output" \
+      UseNodeNestLevel=yes \
+      NodeNestLevel=2 \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      EquationName[1]="Zload" \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2 \
+      UseDeviceCurrentNestLevel=no \
+      DeviceCurrentNestLevel=0 \
+      DeviceCurrentDeviceType="All" \
+      DeviceCurrentSymSyntax=yes \
+      UseCurrentNestLevel=yes \
+      CurrentNestLevel=999 \
+      UseDeviceVoltageNestLevel=no \
+      DeviceVoltageNestLevel=0 \
+      DeviceVoltageDeviceType="All"
+
+Tran:HB1_tran HB_Sol=1 SteadyState=1 StatusLevel=3 \
+Freq[1]=RFfreq Order[1]=5 
+
+Component:tahb_HB1 Module="ATAHB" Type="ModelExtractor" \ 
+ Tran_Analysis="HB1_tran" HB_Analysis="HB1" 
+
+PA_Ideal:X1  Vinput N__11 N__14 N__0 
+Port:Term1  Vload 0 Num=2 Z=Zload Noise=yes 
+Short:Iload  N__11 Vload Mode=0 SaveCurrent=yes 
+Short:Is_high  Vs_high N__10 Mode=0 SaveCurrent=yes 
+V_Source:G3  Vs_high 0 Type="V_DC" Vdc=Vhigh SaveCurrent=1 
+Port:PORT1  N__9 0 Num=1 Z=50 Ohm P[1]=dbmtow(RFpower) Freq[1]=RFfreq    Noise=yes 
+Short:I_input  N__9 Vinput Mode=0 SaveCurrent=yes 
+L:L1  N__10 N__14 L=1.0 uH Noise=yes  
+Short:Is_low  Vs_low N__12 Mode=0 SaveCurrent=yes 
+V_Source:SRC2  Vs_low 0 Type="V_DC" Vdc=Vlow SaveCurrent=1 
+L:L2  N__12 N__0 L=1.0 uH Noise=yes  
+
+
+SweepPlan:Sweep1 SweepPlan[1]="Sweep1_seg1" \ 
+SweepPlan[2]="Sweep1_seg2" 
+SweepPlan:Sweep1_seg1 Start=0 Stop=15 Step=2.5 
+SweepPlan:Sweep1_seg2 Start=16 Stop=30 Step=1 
+
+#ifndef muRataLibWeb_C
+#define muRataLibWeb_C
+; models
+#include "C:/Users/student/Documents/ADS Designkits/muRataLibWeb_C_EIA_confidential/circuit/models/encode.net"
+#endif
+
+
+
+RFfreq=2.4 GHz
+Zload=50
+Vhigh=28 V
+Vlow=-2.85V
+RFpower=10
+aele Pdel_W=0.5*real(Vload[1]*conj(Iload.i[1]));Pdel_dBm=10*log(Pdel_W)+30;Pdc=real(Vs_high[0]*Is_high.i[0]+Vs_low[0]*Is_low.i[0]);P_In_Watts=0.5*real(Vinput[1]*conj(I_input.i[1]));PAE=max2(100*(Pdel_W-P_In_Watts)/Pdc,0);Gain_Transducer=Pdel_dBm-RFpower;
