@@ -10,7 +10,7 @@ ddoId = get_new(ddsId, "Object");
 // DataDisplay Object:
 	set(ddoId, "Path", dds_get_exec_path(what_file(0)));
 	set(ddoId, "Name", dds_get_exec_file(what_file(0)));
-	set(ddoId, "FileModifiedDateAndTime", "2025-10-02T18:08:42Z");
+	set(ddoId, "FileModifiedDateAndTime", "2025-10-02T18:20:22Z");
 	dssId = get(ddoId, "DatasetServer");
 // Default Dataset
 	set(ddoId, "DefaultDataset", "FET_IV_Gm_PowerCalcs");
@@ -4186,13 +4186,13 @@ goId0 = get_new(pageId, "Text");
 	set(ddoId, "UpdateAllExpressions", TRUE);
 	set(ddoId, "EnableExpressionUpdates", TRUE);
 
-ddWinId = get_new(ddsId, "Window", 586, 383, 1194, 800);
+ddWinId = get_new(ddsId, "Window", 593, 254, 1194, 800);
 	set(ddWinId, "Object", ddoId);
 	set(ddWinId, "CurrentPage", 1045257770);
-	set(ddWinId, "PageViewRect_1045257770", list(32, 5630, 7110, 1003));
+	set(ddWinId, "PageViewRect_1045257770", list(-2686, 5585, 6186, -215));
 	set(ddWinId, "PageViewRect_164861806", list(-5116, 13506, 12539, 1620));
 	set(ddWinId, "PageViewRect_1544839351", list(-4471, 9495, 10656, -2148));
-	set(ddWinId, "Frame", list(586, 383, 1194, 800));
+	set(ddWinId, "Frame", list(593, 254, 1194, 800));
 	set(ddWinId, "Maximized", FALSE);
 	set(ddWinId, "ForegroundColor", 0);
 	set(ddWinId, "BackgroundColor", 8);

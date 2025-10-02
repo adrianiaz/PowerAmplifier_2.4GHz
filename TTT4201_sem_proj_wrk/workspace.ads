@@ -1,4 +1,4 @@
-<ADSWorkspace Revision="23" Version="100">
+<ADSWorkspace Revision="24" Version="100">
     <Workspace Name="">
         <LibraryDefs Name="lib.defs" />
         <ConfigFile Name="dds.cfg" />
@@ -54,7 +54,6 @@
         <Data_Files Name="SP_NF_GainMatchKsweep.ds" />
         <Dataset Name="Stab_vs_freq_pwr.ds" />
         <Data_Files Name="Stab_vs_freq_pwr.ds" />
-        <Cell Name="TTT4201_sem_proj1_lib:DC_bias" />
         <Cell Name="TTT4201_sem_proj1_lib:PA_Ideal" />
         <Cell Name="TTT4201_sem_proj1_lib:PA_Real_BiasDrain" />
         <Cell Name="TTT4201_sem_proj1_lib:PA_Real_BiasGate" />
