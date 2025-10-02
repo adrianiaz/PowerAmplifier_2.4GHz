@@ -1,8 +1,7 @@
 <!DOCTYPE SaveWorkspaceState>
 <SaveWorkspaceState>
     <Windows>
-        <Schematic x1="-1" cell="SP_NF_GainMatchK" height="1147" lib="TTT4201_sem_proj1_lib" view="schematic" y1="-8" geom="1,0,2,367,195,1470,901,1920,1200" width="1920"/>
-        <DDS name="SP_NF_GainMatchK"/>
+        <Schematic view="schematic" x1="-1" height="1147" lib="TTT4201_sem_proj1_lib" geom="1,0,2,367,195,1470,901,1920,1200" cell="PA_Ideal" y1="-8" width="1920"/>
     </Windows>
     <MainWindowTab tab="1"/>
 </SaveWorkspaceState>

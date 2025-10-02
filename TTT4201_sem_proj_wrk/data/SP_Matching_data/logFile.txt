@@ -1,0 +1,466 @@
+
+hpeesofsim (*) 615.shp Nov  9 2024, MINT version 5
+    (64-bit windows built: Sat Nov 09, 2024 21:47:38 +0000)
+
+
+***** Simulation started at Thu Oct  2 19:31:27 2025
+      Running on host: "LAB-PC"
+      In Directory: "C:\Users\student\Adrian_Niazi\git folder\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\data"
+      Process ID: 6816
+
+
+OPTIM Optim1[1] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=(0->50)
+Optim1: Seed = 637006343
+Pt DC convergence is used.
+
+SP Optim1[1].SP1[0] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=0  freq=2.4 GHz
+
+Iteration/Trial #0:
+  CurrentEF: 2
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.8919
+    PA_Ideal.TL2.E = 69.5942
+    PA_Ideal.TL3.E = 31.901
+    PA_Ideal.TL4.E = 59.7189
+
+SP Optim1[1].SP1[1] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=1  freq=2.4 GHz
+
+Iteration/Trial #1:
+  CurrentEF: 1.2632324252767
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.89190851112917
+    PA_Ideal.TL2.E = 69.59523729145357
+    PA_Ideal.TL3.E = 31.90004309848079
+    PA_Ideal.TL4.E = 59.71619424486209
+
+SP Optim1[1].SP1[2] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=2  freq=2.4 GHz
+
+Iteration/Trial #2:
+  CurrentEF: 1.04537005361795
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.89231185669101
+    PA_Ideal.TL2.E = 69.59638513516479
+    PA_Ideal.TL3.E = 31.90113366072725
+    PA_Ideal.TL4.E = 59.71530979055073
+
+SP Optim1[1].SP1[3] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=3  freq=2.4 GHz
+
+Iteration/Trial #3:
+  CurrentEF: 0.407423185259446
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.90622909097569
+    PA_Ideal.TL2.E = 69.50442198236217
+    PA_Ideal.TL3.E = 31.95746949179048
+    PA_Ideal.TL4.E = 59.65751119635334
+
+SP Optim1[1].SP1[4] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=4  freq=2.4 GHz
+
+Iteration/Trial #4:
+  CurrentEF: 0.00775841256248079
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00400601054177
+    PA_Ideal.TL2.E = 69.42622492692404
+    PA_Ideal.TL3.E = 31.94262971668189
+    PA_Ideal.TL4.E = 59.62942425302877
+
+SP Optim1[1].SP1[5] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=5  freq=2.4 GHz
+
+Iteration/Trial #5:
+  CurrentEF: 0.00754120205815398
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00267217373925
+    PA_Ideal.TL2.E = 69.42851290244319
+    PA_Ideal.TL3.E = 31.9419409040842
+    PA_Ideal.TL4.E = 59.63062469341659
+
+SP Optim1[1].SP1[6] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=6  freq=2.4 GHz
+
+Iteration/Trial #6:
+  CurrentEF: 0.00749334404726242
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00333516006687
+    PA_Ideal.TL2.E = 69.42740589696106
+    PA_Ideal.TL3.E = 31.94225857758065
+    PA_Ideal.TL4.E = 59.63004982793237
+
+SP Optim1[1].SP1[7] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=7  freq=2.4 GHz
+
+Iteration/Trial #7:
+  CurrentEF: 0.00749328810507273
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00336361635173
+    PA_Ideal.TL2.E = 69.42735808674044
+    PA_Ideal.TL3.E = 31.94227242266241
+    PA_Ideal.TL4.E = 59.63002495857134
+
+SP Optim1[1].SP1[8] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=8  freq=2.4 GHz
+
+Iteration/Trial #8:
+  CurrentEF: 0.00749328650592297
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00335653307521
+    PA_Ideal.TL2.E = 69.42737002070992
+    PA_Ideal.TL3.E = 31.94226895237922
+    PA_Ideal.TL4.E = 59.63003117101825
+
+SP Optim1[1].SP1[9] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=9  freq=2.4 GHz
+
+Iteration/Trial #9:
+  CurrentEF: 0.00749028946492037
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00323689431815
+    PA_Ideal.TL2.E = 69.42756247723541
+    PA_Ideal.TL3.E = 31.94221680619585
+    PA_Ideal.TL4.E = 59.63013009039685
+
+SP Optim1[1].SP1[10] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=10  freq=2.4 GHz
+
+Iteration/Trial #10:
+  CurrentEF: 0.00748940319420439
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00332222039053
+    PA_Ideal.TL2.E = 69.427418917418
+    PA_Ideal.TL3.E = 31.9422584800964
+    PA_Ideal.TL4.E = 59.63005537609822
+
+SP Optim1[1].SP1[11] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=11  freq=2.4 GHz
+
+Iteration/Trial #11:
+  CurrentEF: 0.00748940319420439
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00332091308009
+    PA_Ideal.TL2.E = 69.42742114652842
+    PA_Ideal.TL3.E = 31.942257820151
+    PA_Ideal.TL4.E = 59.63005537609822
+
+SP Optim1[1].SP1[12] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=12  freq=2.4 GHz
+
+Iteration/Trial #12:
+  CurrentEF: 0.00681429396980663
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.9994988188661
+    PA_Ideal.TL2.E = 69.43020341100265
+    PA_Ideal.TL3.E = 31.94299212444809
+    PA_Ideal.TL4.E = 59.63098954877966
+
+SP Optim1[1].SP1[13] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=13  freq=2.4 GHz
+
+Iteration/Trial #13:
+  CurrentEF: 0.00679119951117361
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99883507061835
+    PA_Ideal.TL2.E = 69.43068512697839
+    PA_Ideal.TL3.E = 31.94311896203797
+    PA_Ideal.TL4.E = 59.63115176708266
+
+SP Optim1[1].SP1[14] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=14  freq=2.4 GHz
+
+Iteration/Trial #14:
+  CurrentEF: 0.00679119803323858
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99881233464273
+    PA_Ideal.TL2.E = 69.43070162849678
+    PA_Ideal.TL3.E = 31.94312330544418
+    PA_Ideal.TL4.E = 59.6311573242788
+
+SP Optim1[1].SP1[15] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=15  freq=2.4 GHz
+
+Iteration/Trial #15:
+  CurrentEF: 0.00678257972319988
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99922424129673
+    PA_Ideal.TL2.E = 69.43040212897671
+    PA_Ideal.TL3.E = 31.9430444637216
+    PA_Ideal.TL4.E = 59.63105659444434
+
+SP Optim1[1].SP1[16] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=16  freq=2.4 GHz
+
+Iteration/Trial #16:
+  CurrentEF: 0.00677634483666895
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99887880107734
+    PA_Ideal.TL2.E = 69.43065293966927
+    PA_Ideal.TL3.E = 31.9431104440876
+    PA_Ideal.TL4.E = 59.63114105789019
+
+SP Optim1[1].SP1[17] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=17  freq=2.4 GHz
+
+Iteration/Trial #17:
+  CurrentEF: 0.00677632062511703
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99885613759979
+    PA_Ideal.TL2.E = 69.43066939454458
+    PA_Ideal.TL3.E = 31.94311477140768
+    PA_Ideal.TL4.E = 59.63114660012069
+
+SP Optim1[1].SP1[18] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=18  freq=2.4 GHz
+
+Iteration/Trial #18:
+  CurrentEF: 0.0067757551192251
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99878842326011
+    PA_Ideal.TL2.E = 69.43071853798641
+    PA_Ideal.TL3.E = 31.94312768937101
+    PA_Ideal.TL4.E = 59.63116316001705
+
+SP Optim1[1].SP1[19] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=19  freq=2.4 GHz
+
+Iteration/Trial #19:
+  CurrentEF: 0.00677389884571699
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99897752008492
+    PA_Ideal.TL2.E = 69.43058114804633
+    PA_Ideal.TL3.E = 31.94309157597368
+    PA_Ideal.TL4.E = 59.63111689804799
+
+SP Optim1[1].SP1[20] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=20  freq=2.4 GHz
+
+Iteration/Trial #20:
+  CurrentEF: 0.00677344569894722
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99890981917993
+    PA_Ideal.TL2.E = 69.43063031927731
+    PA_Ideal.TL3.E = 31.94310449540853
+    PA_Ideal.TL4.E = 59.63113346217697
+
+SP Optim1[1].SP1[21] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=21  freq=2.4 GHz
+
+Iteration/Trial #21:
+  CurrentEF: 0.00677309315725894
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99884208552315
+    PA_Ideal.TL2.E = 69.43067950663173
+    PA_Ideal.TL3.E = 31.94311741431456
+    PA_Ideal.TL4.E = 59.63115003636266
+
+SP Optim1[1].SP1[22] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=22  freq=2.4 GHz
+
+Iteration/Trial #22:
+  CurrentEF: 0.0067730615064199
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99881945142531
+    PA_Ideal.TL2.E = 69.43069594408708
+    PA_Ideal.TL3.E = 31.94312173014545
+    PA_Ideal.TL4.E = 59.63115557563569
+
+SP Optim1[1].SP1[23] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=23  freq=2.4 GHz
+
+Iteration/Trial #23:
+  CurrentEF: 0.00677302065254672
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99879682452548
+    PA_Ideal.TL2.E = 69.43071237579275
+    PA_Ideal.TL3.E = 31.94312604291787
+    PA_Ideal.TL4.E = 59.63116111386471
+
+SP Optim1[1].SP1[24] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=24  freq=2.4 GHz
+
+Iteration/Trial #24:
+  CurrentEF: 0.00676331245719859
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99907424586736
+    PA_Ideal.TL2.E = 69.43051047212298
+    PA_Ideal.TL3.E = 31.94307303416789
+    PA_Ideal.TL4.E = 59.63109317309461
+
+SP Optim1[1].SP1[25] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=25  freq=2.4 GHz
+
+Iteration/Trial #25:
+  CurrentEF: 0.00676196112087731
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99891323253204
+    PA_Ideal.TL2.E = 69.43062747875726
+    PA_Ideal.TL3.E = 31.94310373117807
+    PA_Ideal.TL4.E = 59.63113260054602
+
+SP Optim1[1].SP1[26] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=26  freq=2.4 GHz
+
+Iteration/Trial #26:
+  CurrentEF: 0.0067619457065459
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99889064605099
+    PA_Ideal.TL2.E = 69.43064389217881
+    PA_Ideal.TL3.E = 31.9431080358799
+    PA_Ideal.TL4.E = 59.6311381321532
+
+SP Optim1[1].SP1[27] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=27  freq=2.4 GHz
+
+Iteration/Trial #27:
+  CurrentEF: 0.00676191600282099
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99886806888062
+    PA_Ideal.TL2.E = 69.43066029812455
+    PA_Ideal.TL3.E = 31.94311233711219
+    PA_Ideal.TL4.E = 59.63114366219307
+
+SP Optim1[1].SP1[28] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=28  freq=2.4 GHz
+
+Iteration/Trial #28:
+  CurrentEF: 0.00676152462032551
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99880053618063
+    PA_Ideal.TL2.E = 69.43070935618675
+    PA_Ideal.TL3.E = 31.94312519364984
+    PA_Ideal.TL4.E = 59.63116020560239
+
+SP Optim1[1].SP1[29] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=29  freq=2.4 GHz
+
+Iteration/Trial #29:
+  CurrentEF: 0.00673673606199863
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99880336834824
+    PA_Ideal.TL2.E = 69.43070729808571
+    PA_Ideal.TL3.E = 31.94312465443254
+    PA_Ideal.TL4.E = 59.63115951169979
+
+SP Optim1[1].SP1[30] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=30  freq=2.4 GHz
+
+Iteration/Trial #30:
+  CurrentEF: 0.00221861109675043
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99875888556664
+    PA_Ideal.TL2.E = 69.4306346808558
+    PA_Ideal.TL3.E = 31.9429426475313
+    PA_Ideal.TL4.E = 59.63114138032471
+
+SP Optim1[1].SP1[31] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=31  freq=2.4 GHz
+
+Iteration/Trial #31:
+  CurrentEF: 0.00160755336652121
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99874822766076
+    PA_Ideal.TL2.E = 69.43059780303695
+    PA_Ideal.TL3.E = 31.94291210183956
+    PA_Ideal.TL4.E = 59.63124847201479
+
+SP Optim1[1].SP1[32] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=32  freq=2.4 GHz
+
+Iteration/Trial #32:
+  CurrentEF: 0.00151503925740813
+  Optimization variables:
+    PA_Ideal.TL1.E = 19.99868008868202
+    PA_Ideal.TL2.E = 69.42975350387428
+    PA_Ideal.TL3.E = 31.94354778355239
+    PA_Ideal.TL4.E = 59.63067628848755
+
+SP Optim1[1].SP1[33] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=33  freq=2.4 GHz
+
+Iteration/Trial #33:
+  CurrentEF: 3.19619845312677e-05
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00468281061379
+    PA_Ideal.TL2.E = 69.42435898115085
+    PA_Ideal.TL3.E = 31.94304710783278
+    PA_Ideal.TL4.E = 59.62857390177788
+
+SP Optim1[1].SP1[34] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=34  freq=2.4 GHz
+
+Iteration/Trial #34:
+  CurrentEF: 3.18272526090793e-05
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00468412585106
+    PA_Ideal.TL2.E = 69.42435676554749
+    PA_Ideal.TL3.E = 31.94304773426857
+    PA_Ideal.TL4.E = 59.62857275645761
+
+SP Optim1[1].SP1[35] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=35  freq=2.4 GHz
+
+Iteration/Trial #35:
+  CurrentEF: 1.40132926495513e-05
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00468577734051
+    PA_Ideal.TL2.E = 69.4243661847199
+    PA_Ideal.TL3.E = 31.94304855751388
+    PA_Ideal.TL4.E = 59.62859113173185
+
+SP Optim1[1].SP1[36] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=36  freq=2.4 GHz
+
+Iteration/Trial #36:
+  CurrentEF: 3.70707362127086e-06
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00468658105508
+    PA_Ideal.TL2.E = 69.42433136572494
+    PA_Ideal.TL3.E = 31.94308594404306
+    PA_Ideal.TL4.E = 59.62855173274442
+
+SP Optim1[1].SP1[37] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=37  freq=2.4 GHz
+
+Iteration/Trial #37:
+  CurrentEF: 3.01846763983674e-06
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00468497169498
+    PA_Ideal.TL2.E = 69.42428997142585
+    PA_Ideal.TL3.E = 31.94311747020165
+    PA_Ideal.TL4.E = 59.62852060662882
+
+SP Optim1[1].SP1[38] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=38  freq=2.4 GHz
+
+Iteration/Trial #38:
+  CurrentEF: 2.70744347692847e-06
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00476502638086
+    PA_Ideal.TL2.E = 69.42420399562921
+    PA_Ideal.TL3.E = 31.94312020861935
+    PA_Ideal.TL4.E = 59.62848350648418
+
+SP Optim1[1].SP1[39] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=39  freq=2.4 GHz
+
+Iteration/Trial #39:
+  CurrentEF: 2.18355872857422e-06
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00476435286459
+    PA_Ideal.TL2.E = 69.42420662892484
+    PA_Ideal.TL3.E = 31.94311607579698
+    PA_Ideal.TL4.E = 59.62848995594011
+
+SP Optim1[1].SP1[40] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=40  freq=2.4 GHz
+
+Iteration/Trial #40:
+  CurrentEF: 1.97183938047526e-06
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00476443287669
+    PA_Ideal.TL2.E = 69.4242047950227
+    PA_Ideal.TL3.E = 31.94311778932678
+    PA_Ideal.TL4.E = 59.62848877744607
+
+SP Optim1[1].SP1[41] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=41  freq=2.4 GHz
+
+Iteration/Trial #41:
+  CurrentEF: 1.73080559466738e-06
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00476505289315
+    PA_Ideal.TL2.E = 69.42418203911532
+    PA_Ideal.TL3.E = 31.94313222506021
+    PA_Ideal.TL4.E = 59.62847410469739
+
+SP Optim1[1].SP1[42] <TTT4201_sem_proj1_lib:SP_Matching:schematic>  optIter=42  freq=2.4 GHz
+
+Iteration/Trial #42:
+  CurrentEF: 2.95554466266944e-07
+  Optimization variables:
+    PA_Ideal.TL1.E = 20.00478618786405
+    PA_Ideal.TL2.E = 69.42404749386522
+    PA_Ideal.TL3.E = 31.94321437004708
+    PA_Ideal.TL4.E = 59.62838970875396
+Gradient optimizer ends after 42 trials and 1173 evaluations with EF=2.956e-07
+Optim1[1] terminated due to no more improvement 
+
+SP Optim1[1].FinalAnalysis1[1].SP1[1] <TTT4201_sem_proj1_lib:SP_Matching:schematic>   freq=2.4 GHz
+
+Warning detected by hpeesofsim during Nominal Optimization.
+    `X1.X1.X1': Unable to resolve variable(s) or functions(s) in expression ` idi = id.i'
+        id.i
+
+Warning detected by hpeesofsim during Nominal Optimization.
+    `X1.X1.X1': Unable to resolve variable(s) or functions(s) in expression `vdsi=vdi-vsi'
+        vdi
+        vsi
+
+Warning detected by hpeesofsim during Nominal Optimization.
+    `X1.X1.X1': Unable to resolve variable(s) or functions(s) in expression `Tj=dT'
+        dT
+
+
+Resource usage:
+  Total stopwatch time     =    96.58 seconds.
+
