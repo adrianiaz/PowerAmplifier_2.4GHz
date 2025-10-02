@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<annotation_files Time="tor. okt. 2 19:44:48 2025" Simulator="hpeesofsim" Version="1.0">
+ <File name="annotation_1.xml">
+  <Controller name="HB1_(DC)">
+   <P>RFpower: 0.0000000000000000e+00</P>
+   <P>freq: 0.0000000000000000e+00</P>
+  </Controller>
+ </File>
+ <File name="annotation_2.xml">
+  <Controller name="HB1_(HB)">
+   <P>RFpower: 0.0000000000000000e+00</P>
+   <P>freq: 0.0000000000000000e+00</P>
+  </Controller>
+ </File>
+</annotation_files>

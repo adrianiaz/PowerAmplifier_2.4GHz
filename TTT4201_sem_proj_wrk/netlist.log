@@ -1,140 +1,68 @@
-; Top Design: "TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic"
+; Top Design: "TTT4201_sem_proj1_lib:FET_IV_Gm_PowerCalcs:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
-; Library Name: Johanson_lib
-; Cell Name: CapJT
-; View Name: schematic
-define CapJT ( P1  P2 ) 
-parameters  C=1.0 pF 
-C:C7  N__1 P2 C=0.937*C 
-L:L1  P1 N__1 L=(0.647*(C/(1pF))^-0.0414) nH R=3.74*(C/(1pF))^-0.195 Ohm Noise=yes  
-C:C10  P2 0 C=0.0317 pF 
-C:C9  P1 0 C=0.0317 pF 
-end CapJT
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="TTT4201_sem_proj1_lib:FET_IV_Gm_PowerCalcs:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
 
-; Library Name: TTT4201_sem_proj1_lib
-; Cell Name: PA_Real_BiasDrain
-; View Name: schematic
-define PA_Real_BiasDrain ( DCConnect  RF ) 
-;parameters 
-GRM31:C2  N__14 N__5 PartNumber=548 
-MLEF2:TL7  N__13 Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-CapJT:Kap1  N__18 N__12 C=10 pF 
-MLIN2:TL6  N__11 RF Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MLIN2:TL4  N__6 N__7 Subst="MSub1" W=1.5 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MLIN2:TL1  N__10 DCConnect Subst="MSub1" W=1.5 mm L=2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MCROSO:Cros2  N__7 N__14 N__10 N__8 Subst="MSub1" W1=0.625 mm W2=0.625 mm W3=0.625 mm W4=1.25 mm 
-VIA:V2  N__16 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
-VIA:V3  N__5 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
-VIA:V1  N__12 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
-MGAP:Gap1  N__18 N__12 Subst="MSub1" W=0.625 mm S=1 mm 
-GRM18:C1  N__8 N__16 PartNumber=900 
-MCROSO:Cros1  N__18 N__13 N__6 N__11 Subst="MSub1" W1=1.5 mm W2=W50 mm W3=1.5 mm W4=W50 mm 
-end PA_Real_BiasDrain
+global VDS = 0 V
+global VGS = 0 V
+V_Source:SRC4  N__0 0 Type="V_AC" Vdc=VGS Vac=1 mV Freq=freq V_Noise=0 uV SaveCurrent=0 
+ParamSweep:Sweep2 SimInstanceName[1]="AC1" StatusLevel=2 SweepVar="VDS" SweepPlan="Sweep2_stim" 
 
-; Library Name: TTT4201_sem_proj1_lib
-; Cell Name: PA_Real_BiasGate
-; View Name: schematic
-define PA_Real_BiasGate ( DCConnect  RF ) 
-;parameters 
-MLIN2:TL1  N__1 DCConnect Subst="MSub1" W=1.5 mm L=2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MCROSO:Cros2  N__7 N__21 N__1 N__14 Subst="MSub1" W1=0.625 mm W2=0.625 mm W3=0.625 mm W4=1.25 mm 
-MLEF2:TL7  N__17 Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MLIN2:TL4  N__10 N__7 Subst="MSub1" W=1.5 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MLIN2:TL6  N__12 RF Subst="MSub1" W=W50 mm L=17.145100 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MGAP:Gap1  N__15 N__20 Subst="MSub1" W=0.625 mm S=1 mm 
-CapJT:Kap1  N__15 N__20 C=10 pF 
-VIA:V3  N__19 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
-VIA:V1  N__20 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
-GRM18:C1  N__14 N__11 PartNumber=900 
-GRM31:C2  N__21 N__19 PartNumber=548 
-MCROSO:Cros1  N__15 N__17 N__10 N__12 Subst="MSub1" W1=1.5 mm W2=W50 mm W3=1.5 mm W4=W50 mm 
-VIA:V2  N__11 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
-end PA_Real_BiasGate
+SweepPlan: Sweep2_stim Start=VDS_Start Stop=VDS_Stop Step=VDS_Step 
 
-; Library Name: TTT4201_sem_proj1_lib
-; Cell Name: PA_StabCircuit
-; View Name: schematic
-define PA_StabCircuit ( toMatch  toTrans ) 
-;parameters 
-R:R1  toMatch toTrans R=50 Ohm Noise=yes 
-CapJT:Kap1  toMatch toTrans C=Cs pF 
-end PA_StabCircuit
+ParamSweep:Sweep1 SimInstanceName[1]="DC1" SimInstanceName[2]="Sweep2" StatusLevel=2 SweepVar="VGS" SweepPlan="Sweep1_stim" 
 
-; Library Name: TTT4201_sem_proj1_lib
-; Cell Name: PA_Ideal
-; View Name: schematic
-define PA_Ideal ( RFin  RFout  VdcDrain  VdcGate ) 
-;parameters 
-#uselib "MA_RFP_ADS_v2p5" , "CG2H40010F_v2"
-"CG2H40010F_v2":X1  N__3 N__11 0 Rth=7.83 Tbase=25 VDN=28 x1=1 x2=1 
-Short:DC_Block1  N__4 RFout Mode=1 
-Short:DC_Block2  RFin N__7 Mode=1 
-PA_Real_BiasGate:X3  VdcGate N__0 
-PA_StabCircuit:X2  N__0 N__3 
+SweepPlan: Sweep1_stim Start=-1.6 Stop=-3 Step=0.05 
 
-Cs=4.7
-model MSub1 MSUB H=1.52 mm Er=4.4 Mur=1 Cond=5.96e7 Hu=1e+33 mm T=35 um TanD=0.02 Rough=0 mm DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
 
-W50=2.867830
-PA_Real_BiasDrain:X4  VdcDrain N__11 
-TLIN:TL1  N__7 N__0 Z=50.0 Ohm E=19.8919 opt{ 10 to 40 } F=2.4 GHz 
-TLIN:TL3  N__11 N__4 Z=50.0 Ohm E=31.901 opt{ 10 to 55 } F=2.4 GHz 
-#uselib "ckt" , "TLOC"
-TLOC:TL4  N__4 0 Z=50.0 Ohm E=59.7189 opt{ 37 to 80 } F=2.4 GHz 
-#uselib "ckt" , "TLOC"
-TLOC:TL2  N__7 0 Z=50.0 Ohm E=69.5942 opt{ 40 to 84 } F=2.4 GHz 
-end PA_Ideal
+VDS_Start=0
+VDS_Stop=50
+VDS_Step=0.1
+AC:AC1 SortNoise=0 IncludePortNoise=yes BandwidthForNoise=1 Hz FreqConversion=no UseFiniteDiff=no StatusLevel=2 OutputBudgetIV=no DevOpPtLevel=0 \
+OutputPlan="AC1_Output" Freq=2.4 GHz 
 
-PA_Ideal:X1  N__0 N__4 N__5 N__1 
-S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 SPSS_WSP=yes \
-SweepVar="freq" SweepPlan="SwpPlan1" OutputPlan="SP1_Output" 
-
-OutputPlan:SP1_Output \
+OutputPlan:AC1_Output \
       Type="Output" \
+      UseNodeNestLevel=yes \
+      NodeNestLevel=2 \
       UseEquationNestLevel=yes \
       EquationNestLevel=2 \
       UseSavedEquationNestLevel=yes \
-      SavedEquationNestLevel=2
+      SavedEquationNestLevel=2 \
+      UseDeviceCurrentNestLevel=no \
+      DeviceCurrentNestLevel=0 \
+      DeviceCurrentDeviceType="All" \
+      DeviceCurrentSymSyntax=yes \
+      UseCurrentNestLevel=yes \
+      CurrentNestLevel=999 \
+      UseDeviceVoltageNestLevel=no \
+      DeviceVoltageNestLevel=0 \
+      DeviceVoltageDeviceType="All"
 
-#load "python","LinearCollapse"
-Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
-Port:Term1  N__0 0 Num=1 Z=Z0 Noise=yes 
-Port:Term2  N__4 0 Num=2 Z=Z0 Noise=yes 
-V_Source:SRC1  N__1 0 Type="V_DC" Vdc=-2.6 V SaveCurrent=1 
-V_Source:SRC2  N__5 0 Type="V_DC" Vdc=28 V SaveCurrent=1 
+DC:DC1 StatusLevel=2 DevOpPtLevel=0 UseFiniteDiff=no PrintOpPoint=no Restart=1 \
+SweepVar="VDS" SweepPlan="DC1_stim" OutputPlan="DC1_Output" 
 
-Z0=50
+SweepPlan: DC1_stim Start=VDS_Start Stop=VDS_Stop Step=VDS_Step 
 
+OutputPlan:DC1_Output \
+      Type="Output" \
+      UseNodeNestLevel=yes \
+      NodeNestLevel=2 \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2 \
+      UseDeviceCurrentNestLevel=no \
+      DeviceCurrentNestLevel=0 \
+      DeviceCurrentDeviceType="All" \
+      DeviceCurrentSymSyntax=yes \
+      UseCurrentNestLevel=yes \
+      CurrentNestLevel=999 \
+      UseDeviceVoltageNestLevel=no \
+      DeviceVoltageNestLevel=0 \
+      DeviceVoltageDeviceType="All"
 
-SweepPlan:SwpPlan1 SweepPlan[1]="SwpPlan1_seg1" \ 
-SweepPlan[2]="SwpPlan1_seg2" 
-SweepPlan:SwpPlan1_seg1 Start=0.4GHz Stop=5 GHz Step=0.1 GHz 
-SweepPlan:SwpPlan1_seg2 Start=2GHz Stop=2.8 GHz Step=0.05 GHz 
-
-SweepPlan:SwpPlan2 SweepPlan[1]="SwpPlan2_seg1" 
-SweepPlan:SwpPlan2_seg1 Start=2.2GHz Stop=2.6 GHz Step=0.05 GHz 
-
-Options:Options1 Tnom=25 TopologyCheck=yes ForceS_Params=yes GiveAllWarnings=yes MaxWarnings=10  \
-ForceM_Params=yes InitialGuessAnnotation=0 TopologyCheckMessages=no doDeltaAC=no ReduceSPortRatio=0.5  \
-WarnSOA=yes MaxWarnSOA=5 Census=no MinNodalR=1e-2 Ohm LargeCapThreshold=1e-3 F  \
-EnableAssertChecks=no EnableSpareRemoval=yes 
-
-
-#ifndef muRataLibWeb_C
-#define muRataLibWeb_C
-; models
-#include "C:/Users/student/Documents/ADS Designkits/muRataLibWeb_C_EIA_confidential/circuit/models/encode.net"
-#endif
-
-
-
-Optim:"Optim1" OptimType="hpVMO" ErrorForm="L2" SAProgressReport=0 MaxIters=50 P=2 DesiredError=0.0 StatusLevel=4 FinalAnalysis="SP1" NormalizeGoals=yes SetBestValues=yes SaveSolns=no SaveGoals=yes SaveOptimVars=no UpdateDataset=yes SaveNominal=no SaveAllIterations=no UseAllOptVars=yes UseAllGoals=yes SaveCurrentEF=no InitialTempControlMode=0 SANumTrialsPerIter=10 NumShootsPerIter=20 SATempControlAlpha=0.8 CoranaSkip=0.0 EnableCockpit=yes NormalizeError=yes SaveAllTrials=no UseAdvTermCriteria=no CostRelativeTol=1.0e-8 LimitOfContSmallImprovement=5 
-
-OptimGoal:OptimGoal1 Expr="mag(S(1,1))" SimInstanceName="SP1" Weight=1.0 \
-SpecLimitLine[1]="OptimGoal1_limit1" 
-SpecLimitLine:"OptimGoal1_limit1" Type="EqualTo" Min=0.0 Max=0.0 Weight=1.0 
-OptimGoal:OptimGoal2 Expr="mag(S(2,2))" SimInstanceName="SP1" Weight=1.0 \
-SpecLimitLine[1]="OptimGoal2_limit1" 
-SpecLimitLine:"OptimGoal2_limit1" Type="EqualTo" Min=0.0 Max=0.0 Weight=1.0 
+V_Source:SRC1  N__2 0 Type="V_DC" Vdc=VDS SaveCurrent=0 
+#uselib "MA_RFP_ADS_v2p5" , "CG2H40010F_v2"
+"CG2H40010F_v2":X1  N__0 N__6 0 Rth=7.83 Tbase=25 VDN=VDS x1=1 x2=1 
+Short:IDS  N__2 N__6 Mode=0 SaveCurrent=yes 
