@@ -3,74 +3,29 @@ hpeesofsim (*) 615.shp Nov  9 2024, MINT version 5
     (64-bit windows built: Sat Nov 09, 2024 21:47:38 +0000)
 
 
-***** Simulation started at Thu Oct  2 22:04:31 2025
+***** Simulation started at Thu Oct  2 22:59:06 2025
       Running on host: "LAB-PC"
       In Directory: "C:\Users\student\Adrian_Niazi\git folder\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\data"
-      Process ID: 15860
+      Process ID: 15800
 
-
-OPTIM Optim1[1] <TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic>  optIter=(0->50)
-Optim1: Seed = 1537879145
 Pt DC convergence is used.
 
-SP Optim1[1].SP1[0] <TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic>  optIter=0  freq=2.4 GHz
+SP SP1[1] <TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic>   freq=(400 MHz->5 GHz)
 
-Iteration/Trial #0:
-  CurrentEF: 0.0697968920667185
-  Optimization variables:
-    PA_Ideal.TL1.E = 19.6176
-    PA_Ideal.TL2.E = 70.9576
-    PA_Ideal.TL3.E = 33.1905
-    PA_Ideal.TL4.E = 62.5371
-
-SP Optim1[1].SP1[1] <TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic>  optIter=1  freq=2.4 GHz
-
-Iteration/Trial #1:
-  CurrentEF: 0.0697968920665389
-  Optimization variables:
-    PA_Ideal.TL1.E = 19.61760498206712
-    PA_Ideal.TL2.E = 70.95762818012146
-    PA_Ideal.TL3.E = 33.19049001811637
-    PA_Ideal.TL4.E = 62.53709611059695
-
-SP Optim1[1].SP1[2] <TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic>  optIter=2  freq=2.4 GHz
-
-Iteration/Trial #2:
-  CurrentEF: 0.0697968920665389
-  Optimization variables:
-    PA_Ideal.TL1.E = 19.61760435804323
-    PA_Ideal.TL2.E = 70.95762818012146
-    PA_Ideal.TL3.E = 33.19049001811637
-    PA_Ideal.TL4.E = 62.53709611059695
-
-SP Optim1[1].SP1[3] <TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic>  optIter=3  freq=2.4 GHz
-
-Iteration/Trial #3:
-  CurrentEF: 0.0697968920662054
-  Optimization variables:
-    PA_Ideal.TL1.E = 19.61760346483393
-    PA_Ideal.TL2.E = 70.9575998328508
-    PA_Ideal.TL3.E = 33.19050485025172
-    PA_Ideal.TL4.E = 62.53709109056051
-Gradient optimizer ends after 3 trials and 58 evaluations with EF=6.980e-02
-Optim1[1] terminated due to no more improvement 
-
-SP Optim1[1].FinalAnalysis1[1].SP1[1] <TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic>   freq=2.4 GHz
-
-Warning detected by hpeesofsim during Nominal Optimization.
+Warning detected by hpeesofsim during circuit set up.
     `X1.X1.X1': Unable to resolve variable(s) or functions(s) in expression ` idi = id.i'
         id.i
 
-Warning detected by hpeesofsim during Nominal Optimization.
+Warning detected by hpeesofsim during circuit set up.
     `X1.X1.X1': Unable to resolve variable(s) or functions(s) in expression `vdsi=vdi-vsi'
         vdi
         vsi
 
-Warning detected by hpeesofsim during Nominal Optimization.
+Warning detected by hpeesofsim during circuit set up.
     `X1.X1.X1': Unable to resolve variable(s) or functions(s) in expression `Tj=dT'
         dT
 
 
 Resource usage:
-  Total stopwatch time     =    62.91 seconds.
+  Total stopwatch time     =     1.34 seconds.
 
