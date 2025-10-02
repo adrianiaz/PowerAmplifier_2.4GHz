@@ -69,9 +69,9 @@ end PA_StabCircuit
 define PA_Real ( RFin  RFout  VdcDrain  VdcGate ) 
 ;parameters 
 
-Cs=1.11901 opt{ 1 to 82 }
-Rs=141.248 opt{ 10 to 10000 }
-Rp=2.95246e-07 opt{ 0 to 10000 }
+Cs=1.65051 opt{ 1 to 82 }
+Rs=6912.16 opt{ 10 to 10000 }
+Rp=9.74811e-07 opt{ 0 to 10000 }
 #uselib "MA_RFP_ADS_v2p5" , "CG2H40010F_v2"
 "CG2H40010F_v2":X1  N__6 N__9 0 Rth=7.83 Tbase=25 VDN=28 x1=1 x2=1 
 MTAPER:Taper3  RFout N__31 Subst="MSub1" W1=W50 mm W2=1 mm L=1.5 mm 
@@ -79,13 +79,13 @@ MTEE_ADS:Tee4  N__26 N__27 N__29 Subst="MSub1" W1=W50 mm W2=W50 mm W3=W50 mm
 MLIN2:TL11  N__8 N__26 Subst="MSub1" W=W50 mm L=Lo1 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
 PA_StabCircuit:X2  N__4 N__11 
 
-Lo1=2.50061 opt{ 2.5 to 9.5 }
+Lo1=2.5 opt{ 2.5 to 9.5 }
 Co=82 opt{ 1 to 82 }
-Lo2=9.1948 opt{ 6 to 16 }
+Lo2=8.74924 opt{ 6 to 16 }
 
-Li1=9.0001 opt{ 9 to 17 }
-Li2=5.99465 opt{ 1.5 to 6 }
-Ci=9.68684 opt{ 1 to 82 }
+Li1=12.0208 opt{ 9 to 17 }
+Li2=1.50001 opt{ 1.5 to 6 }
+Ci=81.9897 opt{ 1 to 82 }
 
 W50=2.867830
 model MSub1 MSUB H=1.52 mm Er=4.4 Mur=1 Cond=5.96e7 Hu=1e+33 mm T=35 um TanD=0.02 Rough=0 mm DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
@@ -151,15 +151,18 @@ SweepPlan:SwpPlan2_seg1 Start=2.2GHz Stop=2.6 GHz Step=0.05 GHz
 
 SweepPlan:SwpPlan1 SweepPlan[1]="SwpPlan1_seg1" \ 
 SweepPlan[2]="SwpPlan1_seg2" 
-SweepPlan:SwpPlan1_seg1 Start=0.4GHz Stop=5 GHz Step=0.1 GHz 
-SweepPlan:SwpPlan1_seg2 Start=2GHz Stop=2.8 GHz Step=0.05 GHz 
+SweepPlan:SwpPlan1_seg1 Start=0.4GHz Stop=5 GHz Step=0.03 GHz 
+SweepPlan:SwpPlan1_seg2 Start=2GHz Stop=2.8 GHz Step=0.01 GHz 
 
 Optim:"Optim1" OptimType="hpVMO" ErrorForm="L2" SAProgressReport=0 MaxIters=50 P=2 DesiredError=0.0 StatusLevel=4 FinalAnalysis="SP1" NormalizeGoals=yes SetBestValues=yes SaveSolns=no SaveGoals=yes SaveOptimVars=no UpdateDataset=yes SaveNominal=no SaveAllIterations=no UseAllOptVars=yes UseAllGoals=yes SaveCurrentEF=no InitialTempControlMode=0 SANumTrialsPerIter=10 NumShootsPerIter=20 SATempControlAlpha=0.8 CoranaSkip=0.0 EnableCockpit=yes NormalizeError=yes SaveAllTrials=no UseAdvTermCriteria=no CostRelativeTol=1.0e-8 LimitOfContSmallImprovement=5 
 
-OptimGoal:OptimGoal2 Expr="mag(S(2,2))" SimInstanceName="SP1" Weight=1.0 \
-SpecLimitLine[1]="OptimGoal2_limit1" 
-SpecLimitLine:"OptimGoal2_limit1" Type="EqualTo" Min=0.0 Max=0.0 Weight=1.0 
-OptimGoal:OptimGoal1 Expr="mag(S(1,1))" SimInstanceName="SP1" Weight=1.0 \
-SpecLimitLine[1]="OptimGoal1_limit1" 
-SpecLimitLine:"OptimGoal1_limit1" Type="EqualTo" Min=0.0 Max=0.0 Weight=1.0 
+OptimGoal:OptimGoal3 Expr="mu_source" SimInstanceName="SP1" Weight=1.0 \
+SpecLimitLine[1]="OptimGoal3_limit1" 
+SpecLimitLine:"OptimGoal3_limit1" Type="GreaterThan" Min=1.0000001 Weight=1.0 
+OptimGoal:OptimGoal4 Expr="mu_load" SimInstanceName="SP1" Weight=1.0 \
+SpecLimitLine[1]="OptimGoal4_limit1" 
+SpecLimitLine:"OptimGoal4_limit1" Type="GreaterThan" Min=1.0000001 Weight=1.0 
+OptimGoal:OptimGoal5 Expr="db(S(2,1))" SimInstanceName="SP1" Weight=1.0 \
+SpecLimitLine[1]="OptimGoal5_limit1" 
+SpecLimitLine:"OptimGoal5_limit1" Type="GreaterThan" Min=20 Weight=1.0 
 PA_Real:X1  N__6 N__2 N__4 N__0 

@@ -1,7 +1,7 @@
 <!DOCTYPE SaveWorkspaceState>
 <SaveWorkspaceState>
     <Windows>
-        <Schematic cell="PA_Ideal" x1="-1" geom="1,0,3,367,195,1470,901,1920,1200" width="1920" lib="TTT4201_sem_proj1_lib" view="schematic" y1="-8" height="1147"/>
+        <Schematic y1="-8" width="1920" lib="TTT4201_sem_proj1_lib" x1="-1" height="1147" cell="HB1TonePAE_Pswp" view="schematic" geom="1,0,3,407,235,1470,901,1920,1200"/>
     </Windows>
     <MainWindowTab tab="1"/>
 </SaveWorkspaceState>
