@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      student
 HostName                       LAB-PC
-ProcessIdentifier              16948
-ProcessCreationTime_UTC        1759248312
-ProcessCreationTime_Readable   Tue Sep 30 18:05:12 2025 Vest-Europa (sommertid)
+ProcessIdentifier              9432
+ProcessCreationTime_UTC        1759417092
+ProcessCreationTime_Readable   Thu Oct  2 16:58:12 2025 Vest-Europa (sommertid)
 AppIdentifier                  OA File System Design Manager
 OSType                         win32
 ReasonForPlacingEditLock       OpenAccess edit lock
 FilePathUsedToEditLock         C:\Users\student\Adrian_Niazi\git folder\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\TTT4201_sem_proj1_lib\%S%P_%N%F_%Gain%Match%K\schematic\sch.oa.cdslck
-TimeEditLocked                 Tue Sep 30 18:05:55 2025 Vest-Europa (sommertid)
+TimeEditLocked                 Thu Oct  2 16:58:52 2025 Vest-Europa (sommertid)
