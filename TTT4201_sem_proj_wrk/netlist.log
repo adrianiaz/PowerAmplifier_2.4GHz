@@ -126,6 +126,7 @@ Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
 Z0=50
 Port:Term1  N__6 0 Num=1 Z=Z0 Ohm Noise=yes 
 Port:Term2  N__2 0 Num=2 Z=Z0 Ohm Noise=yes 
+PA_Real:X1  N__6 N__2 N__4 N__0 
 
 Options:Options1 Temp=16.85 Tnom=25 TopologyCheck=yes ForceS_Params=yes V_RelTol=1e-6  \
 I_RelTol=1e-6 GiveAllWarnings=yes MaxWarnings=10 ForceM_Params=yes DC_ReadInitialGuess=no  \
@@ -138,7 +139,7 @@ aele mu_load=mu(S);mu_source=mu_prime(S);match_input=sm_gamma1(S);Source_stabcir
 #ifndef muRataLibWeb_C
 #define muRataLibWeb_C
 ; models
-#include "C:/Users/student/Documents/ADS Designkits/muRataLibWeb_C_EIA_confidential/circuit/models/encode.net"
+#include "C:/Users/mazzo/OneDrive/Desktop/ADS/TPlibraries/murata-lib-ads-s-mlcc-2506/muRataLibWeb_C_EIA_confidential/circuit/models/encode.net"
 #endif
 
 
@@ -165,4 +166,3 @@ SpecLimitLine:"OptimGoal4_limit1" Type="GreaterThan" Min=1.0000001 Weight=1.0
 OptimGoal:OptimGoal5 Expr="db(S(2,1))" SimInstanceName="SP1" Weight=1.0 \
 SpecLimitLine[1]="OptimGoal5_limit1" 
 SpecLimitLine:"OptimGoal5_limit1" Type="GreaterThan" Min=20 Weight=1.0 
-PA_Real:X1  N__6 N__2 N__4 N__0 
