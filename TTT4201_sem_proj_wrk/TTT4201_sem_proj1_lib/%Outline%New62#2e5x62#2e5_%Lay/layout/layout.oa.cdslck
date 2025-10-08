@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      mazzo
+HostName                       LAPTOP-3KOFDF5V
+ProcessIdentifier              14588
+ProcessCreationTime_UTC        1759911561
+ProcessCreationTime_Readable   Wed Oct  8 10:19:21 2025 ora legale Europa occidentale
+AppIdentifier                  OA File System Design Manager
+OSType                         win32
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         C:\Users\mazzo\OneDrive\Desktop\ADS\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\TTT4201_sem_proj1_lib\%Outline%New62#2e5x62#2e5_%Lay\layout\layout.oa.cdslck
+TimeEditLocked                 Wed Oct  8 10:36:53 2025 ora legale Europa occidentale
