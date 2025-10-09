@@ -3,10 +3,10 @@ hpeesofsim (*) 615.shp Nov  9 2024, MINT version 5
     (64-bit windows built: Sat Nov 09, 2024 21:47:38 +0000)
 
 
-***** Simulation started at Thu Oct  2 21:26:09 2025
+***** Simulation started at Thu Oct  9 17:48:00 2025
       Running on host: "LAB-PC"
       In Directory: "C:\Users\student\Adrian_Niazi\git folder\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\data"
-      Process ID: 1176
+      Process ID: 1604
 
 
 CT Sweep1[1] <TTT4201_sem_proj1_lib:FET_IV_Gm_PowerCalcs:schematic>   VGS=(-3->-1.6)
@@ -60952,5 +60952,5 @@ AC Sweep1[1].Sweep2[29/29].AC1[501/501] <TTT4201_sem_proj1_lib:FET_IV_Gm_PowerCa
 
 
 Resource usage:
-  Total stopwatch time     =    35.77 seconds.
+  Total stopwatch time     =    35.76 seconds.
 

@@ -1,7 +1,7 @@
-; Top Design: "TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic"
+; Top Design: "TTT4201_sem_proj1_lib:HB2TonePAE_Pswp:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="TTT4201_sem_proj1_lib:SP_NF_GainMatchK:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="TTT4201_sem_proj1_lib:HB2TonePAE_Pswp:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
 ; Library Name: Johanson_lib
 ; Cell Name: CapJT
 ; View Name: schematic
@@ -19,18 +19,18 @@ end CapJT
 define PA_Real_BiasDrain ( DCConnect  RF ) 
 ;parameters 
 GRM31:C2  N__14 N__5 PartNumber=548 
-MLEF2:TL7  N__13 Subst="MSub1" W=W50 mm L=16.3226 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-CapJT:Kap1  N__18 N__12 C=10 pF 
-MLIN2:TL6  N__11 RF Subst="MSub1" W=W50 mm L=16.3226 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MLIN2:TL4  N__6 N__7 Subst="MSub1" W=1.5 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MLEF2:TL7  N__13 Subst="MSub1" W=W50 mm L=16.35585 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+CapJT:Kap1  N__3 N__12 C=10 pF 
+MLIN2:TL6  N__17 RF Subst="MSub1" W=W50 mm L=16.35585 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MLIN2:TL4  N__4 N__7 Subst="MSub1" W=1.5 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MCROSO:Cros3  N__3 N__4 N__13 N__17 Subst="MSub1" W1=1.5 mm W2=1.5 mm W3=W50 mm W4=W50 mm 
 MLIN2:TL1  N__10 DCConnect Subst="MSub1" W=1.5 mm L=2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MCROSO:Cros2  N__7 N__14 N__10 N__8 Subst="MSub1" W1=1.5 mm W2=2 mm W3=1.5 mm W4=1 mm 
+MCROSO:Cros2  N__7 N__14 N__10 N__8 Subst="MSub1" W1=1.9 mm W2=1.5 mm W3=1 mm W4=1.5 mm 
 VIA:V2  N__16 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
 VIA:V3  N__5 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
 VIA:V1  N__12 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
-MGAP:Gap1  N__18 N__12 Subst="MSub1" W=1.5 mm S=0.5 mm 
+MGAP:Gap1  N__3 N__12 Subst="MSub1" W=1.5 mm S=1 mm 
 GRM18:C1  N__8 N__16 PartNumber=900 
-MCROSO:Cros1  N__18 N__13 N__6 N__11 Subst="MSub1" W1=1 mm W2=W50 mm W3=1.5 mm W4=W50 mm 
 end PA_Real_BiasDrain
 
 ; Library Name: TTT4201_sem_proj1_lib
@@ -39,17 +39,17 @@ end PA_Real_BiasDrain
 define PA_Real_BiasGate ( DCConnect  RF ) 
 ;parameters 
 MLIN2:TL1  N__1 DCConnect Subst="MSub1" W=1.5 mm L=2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MCROSO:Cros2  N__7 N__21 N__1 N__14 Subst="MSub1" W1=1.5 mm W2=2 mm W3=1.5 mm W4=1 mm 
-MLEF2:TL7  N__17 Subst="MSub1" W=W50 mm L=16.3226 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MLIN2:TL4  N__10 N__7 Subst="MSub1" W=1.5 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MLIN2:TL6  N__12 RF Subst="MSub1" W=W50 mm L=15.8226 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MGAP:Gap1  N__15 N__20 Subst="MSub1" W=1.5 mm S=0.5 mm 
-CapJT:Kap1  N__15 N__20 C=10 pF 
+MCROSO:Cros2  N__7 N__21 N__1 N__14 Subst="MSub1" W1=1.9 mm W2=1.5 mm W3=1 mm W4=1.5 mm 
+MLEF2:TL7  N__5 Subst="MSub1" W=W50 mm L=16.35585 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MLIN2:TL4  N__3 N__7 Subst="MSub1" W=1.5 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MCROSO:Cros3  N__8 N__3 N__5 N__17 Subst="MSub1" W1=1.5 mm W2=1.5 mm W3=W50 mm W4=W50 mm 
+MLIN2:TL6  N__17 RF Subst="MSub1" W=W50 mm L=16.35585 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MGAP:Gap1  N__8 N__20 Subst="MSub1" W=1.5 mm S=1mm 
+CapJT:Kap1  N__8 N__20 C=10 pF 
 VIA:V3  N__19 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
 VIA:V1  N__20 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
 GRM18:C1  N__14 N__11 PartNumber=900 
 GRM31:C2  N__21 N__19 PartNumber=548 
-MCROSO:Cros1  N__15 N__17 N__10 N__12 Subst="MSub1" W1=1 mm W2=W50 mm W3=1.5 mm W4=W50 mm 
 VIA:V2  N__11 0 D1=0.5 mm D2=0.5 mm H=1.52 mm T=0.00375 mm 
 end PA_Real_BiasGate
 
@@ -69,100 +69,135 @@ end PA_StabCircuit
 define PA_Real ( RFin  RFout  VdcDrain  VdcGate ) 
 ;parameters 
 
-Cs=1.65051 opt{ 1 to 82 }
-Rs=6912.16 opt{ 10 to 10000 }
-Rp=9.74811e-07 opt{ 0 to 10000 }
+Cs=1.66321 opt{ 1 to 82 }
+Rs=5587.26 opt{ 10 to 10000 }
+Rp=1740.43 opt{ 0 to 10000 }
 #uselib "MA_RFP_ADS_v2p5" , "CG2H40010F_v2"
-"CG2H40010F_v2":X1  N__6 N__9 0 Rth=7.83 Tbase=25 VDN=28 x1=1 x2=1 
-MTAPER:Taper3  RFout N__31 Subst="MSub1" W1=W50 mm W2=1 mm L=1.5 mm 
+"CG2H40010F_v2":X1  N__1 N__0 0 Rth=7.83 Tbase=25 VDN=28 x1=1 x2=1 
+MLIN2:TL13  N__31 RFout Subst="MSub1" W=W50 mm L=17.48 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
 MTEE_ADS:Tee4  N__26 N__27 N__29 Subst="MSub1" W1=W50 mm W2=W50 mm W3=W50 mm 
+MGAP:Gap4  N__10 N__20 Subst="MSub1" W=1 mm S=0.5 mm 
+MGAP:Gap3  N__6 N__9 Subst="MSub1" W=1 mm S=0.5 mm 
 MLIN2:TL11  N__8 N__26 Subst="MSub1" W=W50 mm L=Lo1 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
 PA_StabCircuit:X2  N__4 N__11 
 
-Lo1=2.5 opt{ 2.5 to 9.5 }
-Co=82 opt{ 1 to 82 }
-Lo2=8.74924 opt{ 6 to 16 }
+Lo1=2.50003 opt{ 2.5 to 9.5 }
+Co=81.9958 opt{ 1 to 82 }
+Lo2=8.81881 opt{ 6 to 16 }
 
-Li1=12.0208 opt{ 9 to 17 }
-Li2=1.50001 opt{ 1.5 to 6 }
-Ci=81.9897 opt{ 1 to 82 }
+Li1=11.8976 opt{ 9 to 17 }
+Li2=1.5 opt{ 1.5 to 6 }
+Ci=81.9886 opt{ 1 to 82 }
 
 W50=2.867830
 model MSub1 MSUB H=1.52 mm Er=4.4 Mur=1 Cond=5.96e7 Hu=1e+33 mm T=35 um TanD=0.02 Rough=0 mm DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
 PA_Real_BiasGate:X3  VdcGate N__5 
 PA_Real_BiasDrain:X4  VdcDrain N__13 
+MGAP:Gap2  N__0 N__1 Subst="MSub1" W=2 mm S=4.1 mm 
 MTEE_ADS:Tee3  N__8 N__12 N__13 Subst="MSub1" W1=W50 mm W2=2 mm W3=W50 mm 
 R:R1  N__5 N__17 R=Rp Ohm Noise=yes 
 MGAP:Gap1  N__5 N__17 Subst="MSub1" W=1.5 mm S=0.5 mm 
-MLIN2:TL5  N__11 N__6 Subst="MSub1" W=2 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MLIN2:TL6  N__12 N__9 Subst="MSub1" W=2 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MLIN2:TL5  N__11 N__1 Subst="MSub1" W=2 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MLIN2:TL6  N__12 N__0 Subst="MSub1" W=2 mm L=3 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
 MLIN2:TL7  N__14 N__4 Subst="MSub1" W=2 mm L=1.5 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
 MTEE_ADS:Tee1  N__14 N__15 N__17 Subst="MSub1" W1=2 mm W2=W50 mm W3=W50 mm 
 MLIN2:TL8  N__16 N__15 Subst="MSub1" W=W50 mm L=Li2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
 MTEE_ADS:Tee2  N__18 N__16 N__19 Subst="MSub1" W1=W50 mm W2=W50 mm W3=W50 mm 
 MLEF2:TL9  N__19 Subst="MSub1" W=W50 mm L=Li1 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MTAPER:Taper1  N__18 N__20 Subst="MSub1" W1=W50 mm W2=1 mm L=1.5 mm 
-CapJT:Kap1  N__21 N__20 C=Ci pF 
-MTAPER:Taper2  N__22 N__21 Subst="MSub1" W1=W50 mm W2=1 mm L=1.5 mm 
-MLIN2:TL10  RFin N__22 Subst="MSub1" W=W50 mm L=5 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
-MTAPER:Taper4  N__27 N__33 Subst="MSub1" W1=W50 mm W2=1 mm L=1.5 mm 
-CapJT:Kap2  N__31 N__33 C=Co pF 
+MTAPER:Taper1  N__18 N__6 Subst="MSub1" W1=W50 mm W2=1 mm L=1.5 mm 
+CapJT:Kap1  N__9 N__6 C=Ci pF 
+MTAPER:Taper2  N__22 N__9 Subst="MSub1" W1=W50 mm W2=1 mm L=1.5 mm 
+MLIN2:TL10  RFin N__22 Subst="MSub1" W=W50 mm L=18.48 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MTAPER:Taper4  N__27 N__20 Subst="MSub1" W1=W50 mm W2=1 mm L=1.5 mm 
+CapJT:Kap2  N__10 N__20 C=Co pF 
 MLEF2:TL12  N__29 Subst="MSub1" W=W50 mm L=Lo2 mm Wall1=2.5000000000000002e+28 mm Wall2=2.5000000000000002e+28 mm Mod=1 
+MTAPER:Taper5  N__31 N__10 Subst="MSub1" W1=W50 mm W2=1 mm L=1.5 mm 
 end PA_Real
 
-S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz Freq=2.4 GHz DevOpPtLevel=0 SPSS_WSP=yes \
-SweepVar="freq" SweepPlan="SwpPlan1" OutputPlan="SP1_Output" 
+HB:HB1 MaxOrder=Max_IMD_order Freq[1]=RFfreq-fspacing/2 Freq[2]=RFfreq+fspacing/2 Order[1]=7 Order[2]=7 StatusLevel=2 FundOversample=1 \
+Restart=no UseAllSS_Freqs=yes OutputBudgetIV=no UseOutFile=no \
+HBSS_WSP=0 UseInFile=no SweepVar="RFpower" SweepPlan="Sweep1" OutputPlan="HB1_Output" 
 
-OutputPlan:SP1_Output \
+OutputPlan:HB1_Output \
       Type="Output" \
+      UseNodeNestLevel=yes \
+      NodeNestLevel=2 \
       UseEquationNestLevel=yes \
       EquationNestLevel=2 \
+      EquationName[1]="Max_IMD_order" \
       UseSavedEquationNestLevel=yes \
-      SavedEquationNestLevel=2
+      SavedEquationNestLevel=2 \
+      UseDeviceCurrentNestLevel=no \
+      DeviceCurrentNestLevel=0 \
+      DeviceCurrentDeviceType="All" \
+      DeviceCurrentSymSyntax=yes \
+      UseCurrentNestLevel=yes \
+      CurrentNestLevel=999 \
+      UseDeviceVoltageNestLevel=no \
+      DeviceVoltageNestLevel=0 \
+      DeviceVoltageDeviceType="All"
 
-#load "python","LinearCollapse"
-Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+Tran:HB1_tran HB_Sol=1 SteadyState=1 StatusLevel=3 \
+Freq[1]=RFfreq-fspacing/2 Order[1]=7 
+
+Component:tahb_HB1 Module="ATAHB" Type="ModelExtractor" \ 
+ Tran_Analysis="HB1_tran" HB_Analysis="HB1" 
+
+
+global f_bb=0.5*RFfreq
+global f_1 = 1.5*RFfreq
+global f_2 = 2.5*RFfreq
+global f_3 = 3.5*RFfreq
+global f_4 = 4.5*RFfreq
+global Z_load = if freq <= f_bb then Z_l_bb elseif freq <= f_1 then Z_l_fund elseif freq <= f_2 then Z_l_2 elseif freq <= f_3 then Z_l_3 elseif freq <= f_4 then Z_l_4 else Z_l_5 endif
 
 Z0=50
-Port:Term1  N__6 0 Num=1 Z=Z0 Ohm Noise=yes 
-Port:Term2  N__2 0 Num=2 Z=Z0 Ohm Noise=yes 
-PA_Real:X1  N__6 N__2 N__4 N__0 
+;Load Impedances=
+Z_l_bb=Z0+j*0
+Z_l_fund = Z0 + j*0
+Z_l_2 = Z0 + j*0
+Z_l_3 = Z0 + j*0
+Z_l_4 = Z0 + j*0
+Z_l_5 = Z0 + j*0
+;Source Impedances=
+Z_s_bb=Z0+j*0
+Z_s_fund = Z0 + j*0
+Z_s_2 = Z0 + j*0
+Z_s_3 = Z0 + j*0
+Z_s_4 = Z0 + j*0
+Z_s_5 = Z0 + j*0
+Z_s = if freq <= f_bb then Z_s_bb elseif freq <= f_1 then Z_s_fund elseif freq <= f_2 then Z_s_2 elseif freq <= f_3 then Z_s_3 elseif freq <= f_4 then Z_s_4 else Z_s_5 endif
+Port:PORT1  N__9 0 Num=1  Z=Z_s  Freq[1]=RFfreq-fspacing/2 Freq[2]=RFfreq+fspacing/2    P[1]=dbmtow(RFpower-3) P[2]=dbmtow(RFpower-3) Noise=yes Pac=polar(dbmtow(0),0) 
+Short:Iload  N__10 Vload Mode=0 SaveCurrent=yes 
+Short:I_input  N__9 Vinput Mode=0 SaveCurrent=yes 
+C:C1  N__8 N__10 C=1.0 uF 
+C:C2  Vinput N__15 C=1.0 uF 
+Port:Term1  Vload 0 Num=2 Z=Z_load Noise=yes 
 
-Options:Options1 Temp=16.85 Tnom=25 TopologyCheck=yes ForceS_Params=yes V_RelTol=1e-6  \
-I_RelTol=1e-6 GiveAllWarnings=yes MaxWarnings=10 ForceM_Params=yes DC_ReadInitialGuess=no  \
-DC_WriteFinalSolution=no TopologyCheckMessages=no GPU=no doDeltaAC=no ReduceSPort=no  \
-ReduceSPortRatio=0.5 WarnSOA=yes MaxWarnSOA=5 Census=no MinNodalR=1e-2 Ohm  \
-LargeCapThreshold=1e-3 F EnableAssertChecks=no EnableSpareRemoval=yes 
+RFfreq=2.4GHz
+fspacing=5 MHz
+RFpower=10 _dBm
+Max_IMD_order=7
+Vhigh=28V
+Vlow=-2.85
 
-aele mu_load=mu(S);mu_source=mu_prime(S);match_input=sm_gamma1(S);Source_stabcir=s_stab_circle(S,51);Load_stabcir=l_stab_circle(S,51);
+
+SweepPlan:Sweep1 SweepPlan[1]="Sweep1_seg1" \ 
+SweepPlan[2]="Sweep1_seg2" 
+SweepPlan:Sweep1_seg1 Start=0 Stop=15 Step=2.5 
+SweepPlan:Sweep1_seg2 Start=16 Stop=30 Step=1 
+Short:Is_high  Vs_high N__11 Mode=0 SaveCurrent=yes 
+V_Source:G3  Vs_high 0 Type="V_DC" Vdc=Vhigh SaveCurrent=1 
+L:L1  N__11 N__13 L=1.0 uH Noise=yes  
+Short:Is_low  Vs_low N__12 Mode=0 SaveCurrent=yes 
+V_Source:SRC2  Vs_low 0 Type="V_DC" Vdc=Vlow SaveCurrent=1 
+L:L2  N__12 N__14 L=1.0 uH Noise=yes  
+PA_Real:X1  N__15 N__8 N__13 N__14 
 
 #ifndef muRataLibWeb_C
 #define muRataLibWeb_C
 ; models
-#include "C:/Users/mazzo/OneDrive/Desktop/ADS/TPlibraries/murata-lib-ads-s-mlcc-2506/muRataLibWeb_C_EIA_confidential/circuit/models/encode.net"
+#include "C:/Users/student/Adrian_Niazi/ADS_libraries/murata-lib-ads-s-mlcc-2506/muRataLibWeb_C_EIA_confidential/circuit/models/encode.net"
 #endif
 
 
-V_Source:SRC1  N__0 0 Type="V_DC" Vdc=-2.85 V SaveCurrent=1 
-V_Source:SRC2  N__4 0 Type="V_DC" Vdc=28 V SaveCurrent=1 
-
-SweepPlan:SwpPlan2 SweepPlan[1]="SwpPlan2_seg1" 
-SweepPlan:SwpPlan2_seg1 Start=2.2GHz Stop=2.6 GHz Step=0.05 GHz 
-
-
-SweepPlan:SwpPlan1 SweepPlan[1]="SwpPlan1_seg1" \ 
-SweepPlan[2]="SwpPlan1_seg2" 
-SweepPlan:SwpPlan1_seg1 Start=0.4GHz Stop=5 GHz Step=0.03 GHz 
-SweepPlan:SwpPlan1_seg2 Start=2GHz Stop=2.8 GHz Step=0.01 GHz 
-
-Optim:"Optim1" OptimType="hpVMO" ErrorForm="L2" SAProgressReport=0 MaxIters=50 P=2 DesiredError=0.0 StatusLevel=4 FinalAnalysis="SP1" NormalizeGoals=yes SetBestValues=yes SaveSolns=no SaveGoals=yes SaveOptimVars=no UpdateDataset=yes SaveNominal=no SaveAllIterations=no UseAllOptVars=yes UseAllGoals=yes SaveCurrentEF=no InitialTempControlMode=0 SANumTrialsPerIter=10 NumShootsPerIter=20 SATempControlAlpha=0.8 CoranaSkip=0.0 EnableCockpit=yes NormalizeError=yes SaveAllTrials=no UseAdvTermCriteria=no CostRelativeTol=1.0e-8 LimitOfContSmallImprovement=5 
-
-OptimGoal:OptimGoal3 Expr="mu_source" SimInstanceName="SP1" Weight=1.0 \
-SpecLimitLine[1]="OptimGoal3_limit1" 
-SpecLimitLine:"OptimGoal3_limit1" Type="GreaterThan" Min=1.0000001 Weight=1.0 
-OptimGoal:OptimGoal4 Expr="mu_load" SimInstanceName="SP1" Weight=1.0 \
-SpecLimitLine[1]="OptimGoal4_limit1" 
-SpecLimitLine:"OptimGoal4_limit1" Type="GreaterThan" Min=1.0000001 Weight=1.0 
-OptimGoal:OptimGoal5 Expr="db(S(2,1))" SimInstanceName="SP1" Weight=1.0 \
-SpecLimitLine[1]="OptimGoal5_limit1" 
-SpecLimitLine:"OptimGoal5_limit1" Type="GreaterThan" Min=20 Weight=1.0 
