@@ -3,10 +3,10 @@ hpeesofsim (*) 615.shp Nov  9 2024, MINT version 5
     (64-bit windows built: Sat Nov 09, 2024 21:47:38 +0000)
 
 
-***** Simulation started at Thu Oct  9 19:47:12 2025
+***** Simulation started at Sun Oct 12 12:00:20 2025
       Running on host: "LAPTOP-3KOFDF5V"
       In Directory: "C:\Users\mazzo\OneDrive\Desktop\ADS\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\data"
-      Process ID: 20736
+      Process ID: 16228
 
 Pt DC convergence is used.
 
