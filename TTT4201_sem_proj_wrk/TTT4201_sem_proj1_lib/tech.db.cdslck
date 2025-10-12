@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      mazzo
 HostName                       LAPTOP-3KOFDF5V
-ProcessIdentifier              8880
-ProcessCreationTime_UTC        1760255323
-ProcessCreationTime_Readable   Sun Oct 12 09:48:43 2025 ora legale Europa occidentale
+ProcessIdentifier              2152
+ProcessCreationTime_UTC        1760257492
+ProcessCreationTime_Readable   Sun Oct 12 10:24:52 2025 ora legale Europa occidentale
 AppIdentifier                  OA File System Design Manager
 OSType                         win32
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         C:\Users\mazzo\OneDrive\Desktop\ADS\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\TTT4201_sem_proj1_lib\tech.db.cdslck.dirlck
-TimeEditLocked                 Sun Oct 12 10:01:31 2025 ora legale Europa occidentale
+FilePathUsedToEditLock         C:\Users\mazzo\OneDrive\Desktop\ADS\PowerAmplifier_2.4GHz\TTT4201_sem_proj_wrk\TTT4201_sem_proj1_lib\tech.db.cdslck
+TimeEditLocked                 Sun Oct 12 10:28:38 2025 ora legale Europa occidentale

@@ -24,11 +24,13 @@
         <PathsAsPolygons>0</PathsAsPolygons>
         <HoleFormat>Holes As Cutlines</HoleFormat>
         <Layers>
+            <Layer EecadLayer="_layer39" AdsLayer="_layer39" Transfer="1" />
+            <Layer EecadLayer="bound" AdsLayer="bound:drawing" Transfer="1" />
             <Layer EecadLayer="cond2" AdsLayer="cond2:drawing" Transfer="1" />
             <Layer EecadLayer="cond" AdsLayer="cond:drawing" Transfer="1" />
-            <Layer EecadLayer="default" AdsLayer="default:drawing" Transfer="1" />
+            <Layer EecadLayer="default" AdsLayer="default:drawing" Transfer="0" />
             <Layer EecadLayer="hole" AdsLayer="hole:drawing" Transfer="1" />
-            <Layer EecadLayer="ports" AdsLayer="ports:drawing" Transfer="1" />
+            <Layer EecadLayer="ports" AdsLayer="ports:drawing" Transfer="0" />
             <Layer EecadLayer="silk_screen" AdsLayer="silk_screen:drawing" Transfer="1" />
             <Layer EecadLayer="solder_mask" AdsLayer="solder_mask:drawing" Transfer="1" />
         </Layers>
@@ -46,8 +48,11 @@
                 <DrillDiameterMap DrawDiameter="10000" ToolDiameter="10000" />
                 <DrillDiameterMap DrawDiameter="5000" ToolDiameter="5000" />
                 <DrillDiameterMap DrawDiameter="18000" ToolDiameter="18000" />
+                <DrillDiameterMap DrawDiameter="32000" ToolDiameter="32000" />
+                <DrillDiameterMap DrawDiameter="26000" ToolDiameter="26000" />
+                <DrillDiameterMap DrawDiameter="48000" ToolDiameter="48000" />
             </Layer>
-            <Layer LayerName="hole:drawing" LayerNumber="5" DrillExport="0">
+            <Layer LayerName="hole:drawing" LayerNumber="5" DrillExport="1">
                 <DrillDiameterMap DrawDiameter="5000" ToolDiameter="5000" />
                 <DrillDiameterMap DrawDiameter="10000" ToolDiameter="10000" />
                 <DrillDiameterMap DrawDiameter="20000" ToolDiameter="20000" />
@@ -58,6 +63,17 @@
                 <DrillDiameterMap DrawDiameter="26000" ToolDiameter="26000" />
                 <DrillDiameterMap DrawDiameter="48000" ToolDiameter="48000" />
                 <DrillDiameterMap DrawDiameter="32000" ToolDiameter="32000" />
+                <DrillDiameterMap DrawDiameter="18000" ToolDiameter="18000" />
+                <DrillDiameterMap DrawDiameter="10000" ToolDiameter="10000" />
+                <DrillDiameterMap DrawDiameter="5000" ToolDiameter="5000" />
+            </Layer>
+            <Layer LayerName="_layer39" LayerNumber="39" DrillExport="0">
+                <DrillDiameterMap DrawDiameter="32000" ToolDiameter="32000" />
+                <DrillDiameterMap DrawDiameter="10000" ToolDiameter="10000" />
+                <DrillDiameterMap DrawDiameter="48000" ToolDiameter="48000" />
+                <DrillDiameterMap DrawDiameter="5000" ToolDiameter="5000" />
+                <DrillDiameterMap DrawDiameter="26000" ToolDiameter="26000" />
+                <DrillDiameterMap DrawDiameter="18000" ToolDiameter="18000" />
             </Layer>
         </DrillLayers>
         <AutoMerge>0</AutoMerge>
@@ -67,6 +83,8 @@
         <VectorizeText>1</VectorizeText>
         <LayerStackup>1</LayerStackup>
         <Polarity>
+            <Layer EecadLayer="_layer39" Polarity="Positive" />
+            <Layer EecadLayer="bound:drawing" Polarity="Positive" />
             <Layer EecadLayer="cond2:drawing" Polarity="Positive" />
             <Layer EecadLayer="cond:drawing" Polarity="Positive" />
             <Layer EecadLayer="default:drawing" Polarity="Positive" />
