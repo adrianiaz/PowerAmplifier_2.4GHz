@@ -11,7 +11,7 @@ The CG2H40010 transistor used for the amplifier is biased with a drain voltage o
 | Drain voltage \( V_D \)          | 28 V                                                        | 28 V                | 28 V                |
 | Drain current \( I_D \)          | ≥ 50 mA                                                     | 73.35 mA            | 66 mA               |
 | **Small-signal specifications at operating frequency** |                                         |                     |                     |
-| Unconditional stability          | \( \mu > 1 \) for all frequencies of interest               | True                | Conditionally stable|
+| Unconditional stability          | mu > 1  for all frequencies of interest               | True                | Conditionally stable|
 | Small-signal bandwidth           | ≥ 100 MHz within 1 dB                                       | 248.021 MHz         | 253.655 MHz         |
 | Gain \( S_{21} \)                | ≥ 14 dB within bandwidth                                    | 15.7 dB             | 16.38 dB            |
 | **Large-signal specifications**  |                                                             |                     |                     |
